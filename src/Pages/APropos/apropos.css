@@ -1,0 +1,21 @@
+.apropos-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  border: solid black 1px;
+  background-color: bisque;
+  font-family: Arial;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.apropos-carousel1 {
+  width: 200px;
+}
+
+.apropos-carousel2 {
+  width: 200px;
+}

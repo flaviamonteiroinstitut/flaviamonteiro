@@ -1,0 +1,77 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  align-content: left;
+  width: 95vw;
+  height: 80px;
+  margin: 0 auto;
+  margin-top: 15px;
+  /* border: solid black 1px; */
+  background-color: white;
+  color: black;
+  font-family: Montserrat;
+}
+.footer-logo {
+  width: 300px;
+}
+
+.footer-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.footer-text {
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 25px;
+  margin-right: 40px;
+}
+.footer-social img {
+  margin-bottom: 5px;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+.footer-insta {
+  width: 30px;
+}
+
+@media (max-width: 520px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    justify-content: center; /* Center items vertically on smaller screens */
+    align-items: center; /* Center items horizontally on smaller screens */
+    gap: 10px; /* Add some space between the items */
+    height: auto; /* Allow the footer to grow in height as needed on smaller screens */
+  }
+
+  .footer-logo {
+    /* Adjust the width if necessary */
+    max-width: 250px;
+  }
+
+  .footer-items,
+  .footer-social {
+    text-align: center; /* Center the text on smaller screens */
+    margin: 0; /* Remove margin on smaller screens */
+    margin-bottom: 10px;
+  }
+}
