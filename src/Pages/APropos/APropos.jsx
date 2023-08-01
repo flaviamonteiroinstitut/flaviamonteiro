@@ -20,9 +20,10 @@ const APropos = () => {
         <Carousel
           className="apropos-carousel1"
           autoPlay={true}
-          interval={4000}
+          interval={3000}
           infiniteLoop={true}
           showThumbs={false}
+          swipeable={true}
         >
           <div>
             <img src={photo1} />
@@ -34,9 +35,10 @@ const APropos = () => {
         <Carousel
           className="apropos-carousel1"
           autoPlay={true}
-          interval={4000}
+          interval={3000}
           infiniteLoop={true}
           showThumbs={false}
+          swipeable={true}
         >
           <div>
             <img src={photo3} />
