@@ -12,41 +12,85 @@ const APropos = () => {
   };
   return (
     <div className="apropos-container">
-      <div>
+      <div className="apropos-title">
         <h1>Flavia Monteiro</h1>
-        <h2>
+        <h3>
           Coach sportive spécialisée en Pilates et Yoga depuis plus de 9 ans
-        </h2>
-        <Carousel
-          className="apropos-carousel1"
-          autoPlay={true}
-          interval={3000}
-          infiniteLoop={true}
-          showThumbs={false}
-          swipeable={true}
-        >
-          <div>
-            <img src={photo1} />
-          </div>
-          <div>
-            <img src={photo2} />
-          </div>
-        </Carousel>
-        <Carousel
-          className="apropos-carousel1"
-          autoPlay={true}
-          interval={3000}
-          infiniteLoop={true}
-          showThumbs={false}
-          swipeable={true}
-        >
-          <div>
-            <img src={photo3} />
-          </div>
-          <div>
-            <img src={photo4} />
-          </div>
-        </Carousel>
+        </h3>
+      </div>
+      <div className="apropos-content">
+        <div className="apropos-carousel">
+          <Carousel
+            className="apropos-carousel1"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            swipeable={true}
+          >
+            <div>
+              <img src={photo3} />
+            </div>
+            <div>
+              <img src={photo4} />
+            </div>
+          </Carousel>
+          <Carousel
+            className="apropos-carousel1"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            swipeable={true}
+          >
+            <div>
+              <img src={photo1} />
+            </div>
+            <div>
+              <img src={photo2} />
+            </div>
+          </Carousel>
+        </div>
+        <div className="apropos-text">
+          <p>
+            Formée dans les écoles les plus renommées de Paris et du Brésil sur
+            des techniques classiques mais aussi des plus récentes tel que le
+            Neo Pilates. Elle a développé à son tour une méthode personnelle
+            appelée Suspension Pilates. Toujours à la recherche d’une autre
+            voie, d’une nouvelle manière d’aborder les choses, elle se
+            perfectionne au professorat de Yoga Vinyasa à Paris et de Jivamukti
+            à New York City en 2019. Dernièrement, elle s’est tournée vers des
+            soins complémentaires à ses cours en suivant des formations de
+            massages et de drainage au Brésil selon la célèbre méthode Renata
+            França.
+          </p>
+          <br />
+          <p>
+            Le drainage lymphatique se distingue par des résultats
+            impressionnants et immédiats. Cette technique réduit les œdèmes,
+            active la circulation sanguine, développe un réseau complexe de
+            vaisseaux où circulent les fluides corporelles combattant la
+            cellulite. Résultats : un corps moins gonflé, un métabolisme
+            accéléré et une sensation de bien être.
+          </p>
+          <br />
+          <p>
+            La méthode Renata França est très efficace pour soulager et limiter
+            les symptômes du lipoedème, qui se caractérise par l'accumulation de
+            tissu adipeux (graisses) sous-cutané. En effet, même si c'est avant
+            tout un désordre des tissus adipeux, le lymphoedème est une
+            conséquence secondaire du lipoedème. Les témoignages sont unanimes
+            quant à l'efficacité de cette méthode.
+          </p>
+          <br />
+          <p>
+            Une autre technique de la méthode Renata França est le remodelage du
+            corps, dont la principale caractéristique est l'application de
+            mouvements vigoureux et fermes sur tout le corps. Conçu pour modeler
+            les adipocytes, c'est à dire déplacer la graisse vers d’autres
+            endroits et par conséquent donner plus de contour au corps.
+          </p>
+        </div>
       </div>
     </div>
   );
