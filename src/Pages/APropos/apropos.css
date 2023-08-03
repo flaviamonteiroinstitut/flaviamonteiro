@@ -12,16 +12,10 @@
   align-items: center;
   text-align: center;
 }
-/* .apropos-title h1 {
-  font-size: 34px;
-  font-family: roboto condensed;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 5px;
-} */
+
 .apropos-title h3 {
   margin-top: 30px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: roboto condensed;
   font-weight: bold;
 }
@@ -59,6 +53,12 @@
 @media screen and (max-width: 520px) {
   .apropos-content {
     flex-direction: column;
+  }
+  .apropos-title h3 {
+    margin-top: 30px;
+    font-size: 18px;
+    font-family: roboto condensed;
+    font-weight: bold;
   }
   .apropos-carousel {
     margin-left: 0px;

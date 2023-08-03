@@ -1,5 +1,6 @@
 import { Carousel } from "react-responsive-carousel";
 import "./apropos.css";
+
 import photo1 from "../../assets/img/phofil/photo1.jpg";
 import photo2 from "../../assets/img/phofil/photo2.jpg";
 import photo3 from "../../assets/img/phofil/photo3.jpg";
@@ -9,7 +10,6 @@ const APropos = () => {
   return (
     <div className="apropos-container">
       <div className="apropos-title">
-        {/* <h1>Flavia Monteiro</h1> */}
         <h3>
           Coach sportive spécialisée en Pilates et Yoga <br /> depuis plus de 9
           ans

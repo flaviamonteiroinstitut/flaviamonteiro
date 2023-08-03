@@ -12,7 +12,7 @@
   /* z-index: 1; */
 }
 .header-logo {
-  width: 330px;
+  width: 350px;
   cursor: pointer;
 }
 .header-menu {
@@ -81,7 +81,7 @@
   .header-logo {
     display: flex;
     align-self: center;
-    width: 300px;
+    width: 310px;
   }
 
   .header-nav {
