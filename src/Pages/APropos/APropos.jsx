@@ -1,10 +1,15 @@
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 import "./apropos.css";
 
 import photo1 from "../../assets/img/phofil/photo1.jpg";
 import photo2 from "../../assets/img/phofil/photo2.jpg";
 import photo3 from "../../assets/img/phofil/photo3.jpg";
 import photo4 from "../../assets/img/phofil/photo4.jpg";
+import photo5 from "../../assets/img/phofil/photo5.jpg";
+import photo6 from "../../assets/img/phofil/photo6.jpg";
+import photo7 from "../../assets/img/phofil/photo7.jpg";
 
 const APropos = () => {
   return (
@@ -89,7 +94,14 @@ const APropos = () => {
             <img src={photo1} />
           </div>
           <div>
+            <img src={photo6} />
+          </div>
+          <div>
             <img src={photo2} />
+          </div>
+
+          <div>
+            <img src={photo7} />
           </div>
         </Carousel>
       </div>

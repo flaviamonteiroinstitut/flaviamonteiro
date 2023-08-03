@@ -1,7 +1,6 @@
 //Import packages
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-//import Pages
-import Diaporama from "../../Components/Diaporama/Diaporama";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import "./photos.css";
 
@@ -9,7 +8,23 @@ const Photos = () => {
   return (
     <div className="photos-container">
       <div>
-        <Diaporama />
+        <div>
+          {/* <Carousel
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            swipeable={true}
+            showStatus={false}
+          >
+            <div>
+              <img src={photo3} />
+            </div>
+            <div>
+              <img src={photo4} />
+            </div>
+          </Carousel> */}
+        </div>
       </div>
     </div>
   );

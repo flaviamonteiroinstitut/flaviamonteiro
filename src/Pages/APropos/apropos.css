@@ -16,7 +16,7 @@
 .apropos-title h3 {
   margin-top: 30px;
   font-size: 20px;
-  font-family: roboto condensed;
+  font-family: "roboto condensed";
   font-weight: bold;
 }
 .apropos-content {
@@ -40,13 +40,10 @@
   line-height: 20px;
 }
 .apropos-carousel1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
   width: 50%;
   margin-top: 30px;
   margin-bottom: 30px;
+  margin: 0 auto;
 }
 
 /* Media Query for screen size 520px and below */

@@ -1,11 +1,7 @@
-import { Carousel } from "react-responsive-carousel";
-
 import "./lecabinet.css";
 
 import cabinet from "../../assets/img/cabinet/cabinet-bon.jpg";
-
 import video from "../../assets/img/cabinet-video.mp4";
-import map from "../../assets/img/map.png";
 
 const LeCabinet = () => {
   return (
