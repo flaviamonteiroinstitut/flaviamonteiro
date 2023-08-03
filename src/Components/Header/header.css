@@ -13,10 +13,12 @@
 }
 .header-logo {
   width: 330px;
+  cursor: pointer;
 }
 .header-menu {
   display: flex;
   gap: 30px;
+  cursor: pointer;
 }
 .header-nav {
   display: flex;
@@ -40,6 +42,7 @@
   font-family: Montserrat;
   font-weight: bold;
   text-align: center;
+  cursor: pointer;
 }
 
 .header-social {
