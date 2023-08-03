@@ -23,6 +23,7 @@ const LeCabinet = () => {
           src={video}
           type="video/mp4"
           autoPlay
+          controls={true}
           loop
           muted
         />

@@ -1,6 +1,6 @@
 import "./footer.css";
 import logo from "../../assets/img/logo1.png";
-import insta from "../../assets/img/instagram-black.png";
+import insta from "../../assets/img/instagram.png";
 
 const Footer = () => {
   return (
