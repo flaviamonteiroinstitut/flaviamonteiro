@@ -36,14 +36,6 @@
   width: 50%;
   margin-left: 20px;
 }
-.apropos-carousel1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 50%;
-  margin-bottom: 30px;
-}
 
 .apropos-text {
   width: 50%;
@@ -53,12 +45,20 @@
   font-size: 15px;
   line-height: 20px;
 }
+.apropos-carousel1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
 /* Media Query for screen size 520px and below */
 @media screen and (max-width: 520px) {
   .apropos-content {
     flex-direction: column;
-    padding: 20px;
   }
   .apropos-carousel {
     margin-left: 0px;
@@ -73,5 +73,6 @@
   .apropos-text,
   .apropos-carousel {
     width: 90%;
+    margin: 0 auto;
   }
 }
