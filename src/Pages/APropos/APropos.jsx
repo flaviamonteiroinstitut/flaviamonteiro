@@ -13,7 +13,7 @@ const APropos = () => {
   return (
     <div className="apropos-container">
       <div className="apropos-title">
-        <h1>Flavia Monteiro</h1>
+        {/* <h1>Flavia Monteiro</h1> */}
         <h3>
           Coach sportive spécialisée en Pilates et Yoga depuis plus de 9 ans
         </h3>

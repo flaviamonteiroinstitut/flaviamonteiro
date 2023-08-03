@@ -11,15 +11,16 @@
   align-content: start;
   align-items: center;
 }
-.apropos-title h1 {
+/* .apropos-title h1 {
   font-size: 34px;
   font-family: roboto condensed;
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 5px;
-}
+} */
 .apropos-title h3 {
-  font-size: 15px;
+  margin-top: 30px;
+  font-size: 18px;
   font-family: roboto condensed;
   font-weight: bold;
 }
