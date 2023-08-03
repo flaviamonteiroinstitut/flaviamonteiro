@@ -10,6 +10,7 @@
   flex-direction: column;
   align-content: start;
   align-items: center;
+  text-align: center;
 }
 /* .apropos-title h1 {
   font-size: 34px;
@@ -34,6 +35,13 @@
 .apropos-carousel {
   width: 50%;
   margin-left: 20px;
+}
+.apropos-carousel1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 60%;
 }
 
 .apropos-text {

@@ -6,48 +6,30 @@ import photo3 from "../../assets/img/phofil/photo3.jpg";
 import photo4 from "../../assets/img/phofil/photo4.jpg";
 
 const APropos = () => {
-  const customArrowStyles = {
-    fontSize: "20px",
-    color: "white",
-  };
   return (
     <div className="apropos-container">
       <div className="apropos-title">
         {/* <h1>Flavia Monteiro</h1> */}
         <h3>
-          Coach sportive spécialisée en Pilates et Yoga depuis plus de 9 ans
+          Coach sportive spécialisée en Pilates et Yoga <br /> depuis plus de 9
+          ans
         </h3>
       </div>
       <div className="apropos-content">
         <div className="apropos-carousel">
           <Carousel
-            className="apropos-carousel1"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
             showThumbs={false}
             swipeable={true}
+            showStatus={false}
           >
             <div>
               <img src={photo3} />
             </div>
             <div>
               <img src={photo4} />
-            </div>
-          </Carousel>
-          <Carousel
-            className="apropos-carousel1"
-            autoPlay={true}
-            interval={3000}
-            infiniteLoop={true}
-            showThumbs={false}
-            swipeable={true}
-          >
-            <div>
-              <img src={photo1} />
-            </div>
-            <div>
-              <img src={photo2} />
             </div>
           </Carousel>
         </div>
@@ -90,7 +72,26 @@ const APropos = () => {
             les adipocytes, c'est à dire déplacer la graisse vers d’autres
             endroits et par conséquent donner plus de contour au corps.
           </p>
+          <br />
+          <p>L'adaptation des cours pour les pro est toujours un challenge.</p>
         </div>
+      </div>
+      <div className="apropos-carousel1">
+        <Carousel
+          autoPlay={true}
+          interval={3000}
+          infiniteLoop={true}
+          showThumbs={false}
+          swipeable={true}
+          showStatus={false}
+        >
+          <div>
+            <img src={photo1} />
+          </div>
+          <div>
+            <img src={photo2} />
+          </div>
+        </Carousel>
       </div>
     </div>
   );
