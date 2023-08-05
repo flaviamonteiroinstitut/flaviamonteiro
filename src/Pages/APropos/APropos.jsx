@@ -54,7 +54,7 @@ const Modal = ({ isOpen, onClose }) => {
           est toujours un challenge.
         </p>
         <button className="apropos-modal-button" onClick={onClose}>
-          Close
+          Fermer
         </button>
       </div>
     </div>
@@ -111,9 +111,9 @@ const APropos = () => {
             ▪️Coach de Yoga et Pilates des joueurs Paris Basket
           </p>
           {/* PLUS button */}
-          <button className="apropos-button" onClick={toggleModal}>
+          <p className="apropos-button" onClick={toggleModal}>
             PLUS
-          </button>
+          </p>
           {/* Modal */}
           <Modal isOpen={isModalOpen} onClose={toggleModal} />
         </div>

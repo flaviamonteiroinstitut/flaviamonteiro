@@ -67,21 +67,27 @@
   max-height: 80%; /* Limit the maximum height of the modal to 80% of the viewing area */
   overflow-y: auto; /* Add vertical scroll if content overflows */
   background-color: white;
-  padding: 20px;
+  padding: 25px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.apropos-modal-content h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
 .apropos-modal-button {
-  margin-top: 10px;
+  margin-top: 15px;
   width: 90px;
   border-radius: 5px;
 }
 
 .apropos-button {
-  margin-top: 10px;
+  margin-top: 5px;
   width: 90px;
   border-radius: 5px;
+  text-decoration: underline;
 }
 
 /* Media Query for screen size 520px and below */
