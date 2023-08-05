@@ -103,6 +103,9 @@ const APropos = () => {
           <div>
             <img src={photo7} />
           </div>
+          <div>
+            <img src={photo5} />
+          </div>
         </Carousel>
       </div>
     </div>

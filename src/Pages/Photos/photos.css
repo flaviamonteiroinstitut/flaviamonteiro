@@ -4,6 +4,41 @@
   /* border: solid black 1px; */
   background-color: white;
 }
-.photos-carousel {
+
+.photos-title {
+  display: flex;
+  flex-direction: column;
+  align-content: start;
+  align-items: center;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.photos-title h3 {
+  font-size: 20px;
+  font-family: "roboto condensed";
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.photos-carousels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.remodelage {
+  width: 350px;
+  height: 100% !important;
+  object-fit: fill;
+  border: 1px solid black;
+  background-color: rgb(253, 236, 217);
+  border-radius: 10px;
+  padding: 10px;
+  height: 100% !important;
 }

@@ -3,27 +3,122 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import "./photos.css";
+import drainage from "./drainage.json";
+import remodelage from "./remodelage.json";
 
 const Photos = () => {
+  const drainageList = drainage.photos.map((photoPath, index) => (
+    <div key={index}>
+      <img src={photoPath} alt={`Photo ${index}`} />
+    </div>
+  ));
+  const remodelageList = remodelage.photos.map((photoPath, index) => (
+    <div key={index}>
+      <img src={photoPath} alt={`Photo ${index}`} />
+    </div>
+  ));
   return (
     <div className="photos-container">
-      <div>
-        <div>
-          {/* <Carousel
+      <div className="photos-title">
+        <h3>Drainage lymphatique et remodelage</h3>
+      </div>
+      <div className="photos-carousels">
+        <div className="photos-drainage">
+          <Carousel
+            className="remodelage"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
             showThumbs={false}
+            thumbWidth={70}
             swipeable={true}
             showStatus={false}
+            showIndicators={false}
           >
-            <div>
-              <img src={photo3} />
-            </div>
-            <div>
-              <img src={photo4} />
-            </div>
-          </Carousel> */}
+            {drainageList}
+          </Carousel>
+        </div>
+        <div className="photos-drainage">
+          <Carousel
+            className="remodelage"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            thumbWidth={70}
+            swipeable={true}
+            showStatus={false}
+            showIndicators={false}
+            // dynamicHeight={true}
+          >
+            {remodelageList}
+          </Carousel>
+        </div>
+        <div className="photos-drainage">
+          <Carousel
+            className="remodelage"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            thumbWidth={70}
+            swipeable={true}
+            showStatus={false}
+            showIndicators={false}
+          >
+            {drainageList}
+          </Carousel>
+        </div>
+      </div>
+      <div className="photos-title">
+        <h3>Drainage lymphatique et remodelage</h3>
+      </div>
+      <div className="photos-carousels">
+        <div className="photos-drainage">
+          <Carousel
+            className="remodelage"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            thumbWidth={70}
+            swipeable={true}
+            showStatus={false}
+            showIndicators={false}
+          >
+            {drainageList}
+          </Carousel>
+        </div>
+        <div className="photos-drainage">
+          <Carousel
+            className="remodelage"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            thumbWidth={70}
+            swipeable={true}
+            showStatus={false}
+            showIndicators={false}
+            // dynamicHeight={true}
+          >
+            {remodelageList}
+          </Carousel>
+        </div>
+        <div className="photos-drainage">
+          <Carousel
+            className="remodelage"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            thumbWidth={70}
+            swipeable={true}
+            showStatus={false}
+            showIndicators={false}
+          >
+            {drainageList}
+          </Carousel>
         </div>
       </div>
     </div>
