@@ -6,6 +6,7 @@ import "./photos.css";
 import drainage from "./drainage.json";
 import remodelage from "./remodelage.json";
 import pilates from "./pilates.json";
+import yoga from "./yoga.json";
 
 const Photos = () => {
   const drainageList = drainage.photos.map((photoPath, index) => (
@@ -23,16 +24,22 @@ const Photos = () => {
       <img src={photoPath} alt={`Photo ${index}`} />
     </div>
   ));
+  const yogaList = yoga.photos.map((photoPath, index) => (
+    <div key={index}>
+      <img src={photoPath} alt={`Photo ${index}`} />
+    </div>
+  ));
 
   return (
     <div className="photos-container">
       <div className="photos-title">
-        <h3>Drainage lymphatique et remodelage</h3>
+        <h2>Galerie de photos</h2>
       </div>
       <div className="photos-carousels">
-        <div className="photos-drainage">
+        <div>
+          <h3>REMODELAGE</h3>
           <Carousel
-            className="remodelage"
+            className="apropos-carousel-options"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
@@ -42,13 +49,15 @@ const Photos = () => {
             showStatus={false}
             showIndicators={false}
             useKeyboardArrows={true}
+            dynamicHeight={true}
           >
             {drainageList}
           </Carousel>
         </div>
-        <div className="photos-drainage">
+        <div>
+          <h3>DRAINAGE LYMPHATIQUE</h3>
           <Carousel
-            className="remodelage"
+            className="apropos-carousel-options"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
@@ -63,9 +72,64 @@ const Photos = () => {
             {remodelageList}
           </Carousel>
         </div>
-        <div className="photos-drainage">
+        <div>
+          <h3>PILATES</h3>
           <Carousel
-            className="remodelage"
+            className="apropos-carousel-options"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            thumbWidth={70}
+            swipeable={true}
+            showStatus={false}
+            showIndicators={false}
+            useKeyboardArrows={true}
+            dynamicHeight={true}
+          >
+            {pilatesList}
+          </Carousel>
+        </div>
+        <div>
+          <h3>YOGA</h3>
+          <Carousel
+            className="apropos-carousel-options"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            thumbWidth={70}
+            swipeable={true}
+            showStatus={false}
+            showIndicators={false}
+            useKeyboardArrows={true}
+            dynamicHeight={true}
+          >
+            {yogaList}
+          </Carousel>
+        </div>
+        <div>
+          <h3>MASSAGE RELAXANTE</h3>
+          <Carousel
+            className="apropos-carousel-options"
+            autoPlay={true}
+            interval={3000}
+            infiniteLoop={true}
+            showThumbs={false}
+            thumbWidth={70}
+            swipeable={true}
+            showStatus={false}
+            showIndicators={false}
+            useKeyboardArrows={true}
+            dynamicHeight={true}
+          >
+            {yogaList}
+          </Carousel>
+        </div>
+        <div>
+          <h3>Drainage lymphatique et remodelage</h3>
+          <Carousel
+            className="apropos-carousel-options"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
@@ -81,59 +145,8 @@ const Photos = () => {
           </Carousel>
         </div>
       </div>
-      <div className="photos-title">
-        <h3>Drainage lymphatique et remodelage</h3>
-      </div>
-      <div className="photos-carousels">
-        <div className="photos-drainage">
-          <Carousel
-            className="remodelage"
-            autoPlay={true}
-            interval={3000}
-            infiniteLoop={true}
-            showThumbs={false}
-            thumbWidth={70}
-            swipeable={true}
-            showStatus={false}
-            showIndicators={false}
-            useKeyboardArrows={true}
-          >
-            {drainageList}
-          </Carousel>
-        </div>
-        <div className="photos-drainage">
-          <Carousel
-            className="remodelage"
-            autoPlay={true}
-            interval={3000}
-            infiniteLoop={true}
-            showThumbs={false}
-            thumbWidth={70}
-            swipeable={true}
-            showStatus={false}
-            showIndicators={false}
-            useKeyboardArrows={true}
-          >
-            {remodelageList}
-          </Carousel>
-        </div>
-        <div className="photos-drainage">
-          <Carousel
-            className="remodelage"
-            autoPlay={true}
-            interval={3000}
-            infiniteLoop={true}
-            showThumbs={false}
-            thumbWidth={70}
-            swipeable={true}
-            showStatus={false}
-            showIndicators={false}
-            useKeyboardArrows={true}
-          >
-            {drainageList}
-          </Carousel>
-        </div>
-      </div>
+
+      <div></div>
     </div>
   );
 };
