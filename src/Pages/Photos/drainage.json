@@ -1,12 +1,12 @@
 {
   "photos": [
-    "../src/assets/img/drainage/avantapres1-Grande.jpeg",
-    "../../src/assets/img/drainage/avantapres2-Grande.jpeg",
-    "../../assets/img/drainage/avantapres3-Grande.jpeg",
-    "../../assets/img/drainage/avantapres4-Grande.jpeg",
-    "../../assets/img/drainage/avantapres5-Grande.jpeg",
-    "../../assets/img/drainage/avantapres6-Grande.jpeg",
-    "../../assets/img/drainage/avantapres7-Grande.jpeg",
-    "../../assets/img/drainage/avantapres8-Grande.jpeg"
+    "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/ebec51d344417fa9c69beeff54429d0fdf7c2ccf/src/assets/img/drainage/avantapres2-Grande.jpeg",
+    "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/ebec51d344417fa9c69beeff54429d0fdf7c2ccf/src/assets/img/drainage/avantapres3-Grande.jpeg",
+    "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/ebec51d344417fa9c69beeff54429d0fdf7c2ccf/src/assets/img/drainage/avantapres4-Grande.jpeg",
+    "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/ebec51d344417fa9c69beeff54429d0fdf7c2ccf/src/assets/img/drainage/avantapres5-Grande.jpeg",
+    "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/ebec51d344417fa9c69beeff54429d0fdf7c2ccf/src/assets/img/drainage/avantapres6-Grande.jpeg",
+    "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/ebec51d344417fa9c69beeff54429d0fdf7c2ccf/src/assets/img/drainage/avantapres7-Grande.jpeg",
+    "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/ebec51d344417fa9c69beeff54429d0fdf7c2ccf/src/assets/img/drainage/avantapres8-Grande.jpeg",
+    "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/ebec51d344417fa9c69beeff54429d0fdf7c2ccf/src/assets/img/drainage/avantapres1-Grande.jpeg"
   ]
 }
