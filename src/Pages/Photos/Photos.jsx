@@ -34,6 +34,7 @@ const Photos = () => {
             swipeable={true}
             showStatus={false}
             showIndicators={false}
+            useKeyboardArrows={true}
           >
             {drainageList}
           </Carousel>
@@ -49,7 +50,7 @@ const Photos = () => {
             swipeable={true}
             showStatus={false}
             showIndicators={false}
-            // dynamicHeight={true}
+            useKeyboardArrows={true}
           >
             {remodelageList}
           </Carousel>
@@ -65,6 +66,7 @@ const Photos = () => {
             swipeable={true}
             showStatus={false}
             showIndicators={false}
+            useKeyboardArrows={true}
           >
             {drainageList}
           </Carousel>
@@ -85,6 +87,7 @@ const Photos = () => {
             swipeable={true}
             showStatus={false}
             showIndicators={false}
+            useKeyboardArrows={true}
           >
             {drainageList}
           </Carousel>
@@ -100,7 +103,7 @@ const Photos = () => {
             swipeable={true}
             showStatus={false}
             showIndicators={false}
-            // dynamicHeight={true}
+            useKeyboardArrows={true}
           >
             {remodelageList}
           </Carousel>
@@ -116,6 +119,7 @@ const Photos = () => {
             swipeable={true}
             showStatus={false}
             showIndicators={false}
+            useKeyboardArrows={true}
           >
             {drainageList}
           </Carousel>
