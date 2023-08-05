@@ -104,11 +104,11 @@ const APropos = () => {
             renommées de Paris et du Brésil. Pilates classique et Néo Pilates.
             <br />
             ▪️Professeur diplômée de Yoga Vinyasa et formée au Jivamukti à New
-            York City en 2019 <br />
+            York City en 2019. <br />
             ▪️Formée et diplômée (São Paulo Brésil) au massage de drainage et
-            remodelage Méthode Renata França
+            remodelage Méthode Renata França.
             <br />
-            ▪️Coach de Yoga et Pilates des joueurs Paris Basket
+            ▪️Coach de Yoga et Pilates des joueurs Paris Basket.
           </p>
           {/* PLUS button */}
           <p className="apropos-button" onClick={toggleModal}>

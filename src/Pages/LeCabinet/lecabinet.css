@@ -31,33 +31,23 @@
   flex-direction: column; /* Place the elements in a column */
   gap: 20px;
   margin-top: 10px;
-  padding: 20px;
 }
 
 .lecabinet-video {
-  width: 100%;
+  width: 95%;
   border: 1px solid gray;
-}
-
-.lecabinet-text {
-  width: 100%;
-  text-align: justify;
-  margin-right: 20px;
-  font-family: roboto condensed;
-  font-size: 18px;
-  line-height: 20px;
-}
-
-.lecabinet-text h2 {
-  font-size: 20px;
-  text-align: center;
+  border-radius: 10px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .lecabinet-photo {
-  width: 100%;
+  width: 95%;
   margin: 0 auto; /* Center the photo horizontally */
   margin-top: 30px;
   margin-bottom: 30px;
+  border: 1px solid gray;
+  border-radius: 10px;
 }
 
 /* Media Query for screen size 520px and below */
@@ -68,7 +58,6 @@
   }
 
   .lecabinet-title,
-  .lecabinet-text,
   .lecabinet-carousel {
     width: 100%;
     margin: 0 auto;

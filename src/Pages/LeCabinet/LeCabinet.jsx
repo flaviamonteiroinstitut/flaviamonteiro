@@ -1,3 +1,6 @@
+//import packages
+import ReactPlayer from "react-player";
+
 import "./lecabinet.css";
 
 import cabinet from "../../assets/img/cabinet/cabinet-bon.jpg";
@@ -14,18 +17,19 @@ const LeCabinet = () => {
         </h3>
       </div>
       <div className="lecabinet-content">
-        <video
-          className="lecabinet-video"
-          src={video}
-          type="video/mp4"
-          autoPlay
-          controls={true}
-          loop
-          muted
-        />
-        <div className="lecabinet-text">
-          <img className="lecabinet-photo" src={cabinet} alt="cabinet" />
+        <div>
+          <div className="lecabinet-video">
+            <ReactPlayer
+              url={video}
+              controls={true}
+              width="100%"
+              height="100%"
+              showStatus={false}
+              showThumbs={false}
+            />
+          </div>
         </div>
+        <img className="lecabinet-photo" src={cabinet} alt="cabinet" />
       </div>
     </div>
   );
