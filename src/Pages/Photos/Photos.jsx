@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./photos.css";
 import drainage from "./drainage.json";
 import remodelage from "./remodelage.json";
+import pilates from "./pilates.json";
 
 const Photos = () => {
   const drainageList = drainage.photos.map((photoPath, index) => (
@@ -17,6 +18,12 @@ const Photos = () => {
       <img src={photoPath} alt={`Photo ${index}`} />
     </div>
   ));
+  const pilatesList = pilates.photos.map((photoPath, index) => (
+    <div key={index}>
+      <img src={photoPath} alt={`Photo ${index}`} />
+    </div>
+  ));
+
   return (
     <div className="photos-container">
       <div className="photos-title">
@@ -51,6 +58,7 @@ const Photos = () => {
             showStatus={false}
             showIndicators={false}
             useKeyboardArrows={true}
+            dynamicHeight={true}
           >
             {remodelageList}
           </Carousel>
@@ -67,8 +75,9 @@ const Photos = () => {
             showStatus={false}
             showIndicators={false}
             useKeyboardArrows={true}
+            dynamicHeight={true}
           >
-            {drainageList}
+            {pilatesList}
           </Carousel>
         </div>
       </div>
