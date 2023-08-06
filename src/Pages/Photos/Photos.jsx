@@ -39,7 +39,7 @@ const Photos = () => {
         <div>
           <h3>REMODELAGE</h3>
           <Carousel
-            className="apropos-carousel-options"
+            className="photos-carousel-options"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
@@ -57,7 +57,7 @@ const Photos = () => {
         <div>
           <h3>DRAINAGE LYMPHATIQUE</h3>
           <Carousel
-            className="apropos-carousel-options"
+            className="photos-carousel-options"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
@@ -75,7 +75,7 @@ const Photos = () => {
         <div>
           <h3>PILATES</h3>
           <Carousel
-            className="apropos-carousel-options"
+            className="photos-carousel-options"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
@@ -85,7 +85,7 @@ const Photos = () => {
             showStatus={false}
             showIndicators={false}
             useKeyboardArrows={true}
-            dynamicHeight={true}
+            // dynamicHeight={true}
           >
             {pilatesList}
           </Carousel>
@@ -93,7 +93,7 @@ const Photos = () => {
         <div>
           <h3>YOGA</h3>
           <Carousel
-            className="apropos-carousel-options"
+            className="photos-carousel-options"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
@@ -111,7 +111,7 @@ const Photos = () => {
         <div>
           <h3>MASSAGE RELAXANTE</h3>
           <Carousel
-            className="apropos-carousel-options"
+            className="photos-carousel-options"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}
@@ -127,9 +127,9 @@ const Photos = () => {
           </Carousel>
         </div>
         <div>
-          <h3>Drainage lymphatique et remodelage</h3>
+          <h3>TITRE A METTRE</h3>
           <Carousel
-            className="apropos-carousel-options"
+            className="photos-carousel-options"
             autoPlay={true}
             interval={3000}
             infiniteLoop={true}

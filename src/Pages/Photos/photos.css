@@ -1,6 +1,6 @@
 .photos-container {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   /* border: solid black 1px; */
   background-color: white;
   margin-bottom: 30px;
@@ -9,7 +9,7 @@
   font-size: 20px;
 }
 
-h3 {
+.photos-container h3 {
   text-align: center;
   margin-bottom: 10px;
 }
@@ -41,7 +41,7 @@ h3 {
   margin-bottom: 15px;
 }
 
-.apropos-carousel-options {
+.photos-carousel-options {
   width: 350px;
   height: 100% !important;
   object-fit: cover;
@@ -49,5 +49,4 @@ h3 {
   background-color: rgb(253, 236, 217);
   border-radius: 10px;
   padding: 10px;
-  height: 100% !important;
 }
