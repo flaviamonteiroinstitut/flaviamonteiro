@@ -85,7 +85,7 @@ const Photos = () => {
             showStatus={false}
             showIndicators={false}
             useKeyboardArrows={true}
-            // dynamicHeight={true}
+            dynamicHeight={true}
           >
             {pilatesList}
           </Carousel>
