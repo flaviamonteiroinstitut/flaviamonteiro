@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import "./apropos.css";
 
+<<<<<<< HEAD
 import photo1 from "../../assets/img/phofil/photo1.jpg";
 import photo2 from "../../assets/img/phofil/photo2.jpg";
 import photo3 from "../../assets/img/phofil/photo3.jpg";
@@ -13,6 +14,8 @@ import photo5 from "../../assets/img/phofil/photo5.jpg";
 import photo6 from "../../assets/img/phofil/photo6.jpg";
 import photo7 from "../../assets/img/phofil/photo7.jpg";
 
+=======
+>>>>>>> e423bf8 (all)
 // Modal component
 const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -20,7 +23,10 @@ const Modal = ({ isOpen, onClose }) => {
   return (
     <div className="apropos-modal-container">
       <div className="apropos-modal-content">
+<<<<<<< HEAD
         {/* Modal content here */}
+=======
+>>>>>>> e423bf8 (all)
         <h2>Flavia Monteiro</h2>
         <p>
           Formée dans les écoles les plus renommées de Paris et du Brésil sur
@@ -89,10 +95,23 @@ const APropos = () => {
             showStatus={false}
           >
             <div>
+<<<<<<< HEAD
               <img src={photo3} alt="Photo 3" />
             </div>
             <div>
               <img src={photo4} alt="Photo 4" />
+=======
+              <img
+                src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo3.jpg"
+                alt="Photo 3"
+              />
+            </div>
+            <div>
+              <img
+                src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo4.jpg"
+                alt="Photo 4"
+              />
+>>>>>>> e423bf8 (all)
             </div>
           </Carousel>
         </div>
@@ -126,6 +145,7 @@ const APropos = () => {
           showThumbs={false}
           swipeable={true}
           showStatus={false}
+<<<<<<< HEAD
         >
           <div>
             <img src={photo1} alt="Photo 1" />
@@ -141,6 +161,39 @@ const APropos = () => {
           </div>
           <div>
             <img src={photo5} alt="Photo 5" />
+=======
+          dynamicHeight={true}
+        >
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo1.jpg"
+              alt="Photo 1"
+            />
+          </div>
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo6.jpg"
+              alt="Photo 6"
+            />
+          </div>
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo2.jpg"
+              alt="Photo 2"
+            />
+          </div>
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo7.jpg"
+              alt="Photo 7"
+            />
+          </div>
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo5.jpg"
+              alt="Photo 5"
+            />
+>>>>>>> e423bf8 (all)
           </div>
         </Carousel>
       </div>
