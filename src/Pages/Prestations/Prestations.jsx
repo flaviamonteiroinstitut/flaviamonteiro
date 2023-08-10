@@ -54,17 +54,21 @@ const Prestations = () => {
       price: "50 €",
     },
     {
-      title: "Massage tônique",
-      photo: "service1.jpg",
+      title: "Yoga",
+      photo:
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/yoga/yoga1.jpeg",
       text: "Service 1 description goes here.",
-      video: "/path/to/your/local/video.mp4",
+      video:
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
       price: "50 €",
     },
     {
-      title: "Massage Relaxante ",
-      photo: "service1.jpg",
+      title: "Yoga",
+      photo:
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/yoga/yoga1.jpeg",
       text: "Service 1 description goes here.",
-      video: "/path/to/your/local/video.mp4",
+      video:
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
       price: "50 €",
     },
     // Add more service objects here

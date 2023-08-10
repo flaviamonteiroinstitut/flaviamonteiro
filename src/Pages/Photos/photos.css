@@ -33,7 +33,7 @@
 .photos-carousels {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start; /* voir ici */
   width: 100%;
   flex-wrap: wrap;
   gap: 20px;
