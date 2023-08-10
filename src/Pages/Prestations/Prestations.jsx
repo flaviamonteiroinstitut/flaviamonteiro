@@ -93,7 +93,10 @@ const Prestations = () => {
           className="prestations-service-item"
           onClick={() => openModal(service)}
         >
-          <h3>{service.title}</h3>
+          <div className="prestations-service-info">
+            <h3>{service.title}</h3>
+            <p>{service.text}</p>
+          </div>
           <img src={service.photo} alt={service.title} />
         </div>
       ))}
