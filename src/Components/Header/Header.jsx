@@ -46,6 +46,7 @@ const Header = () => {
           <li onClick={() => handleItemClick("/lecabinet")}>Le cabinet</li>
           <li onClick={() => handleItemClick("/photos")}>Galerie</li>
           <li onClick={() => handleItemClick("/prestations")}>Prestations</li>
+          <li onClick={() => handleItemClick("/evenements")}>Évènements</li>
         </ul>
         <ul className="header-menu1">
           <li>
