@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95vw;
+  width: 97vw;
   height: 80px;
   margin: 0 auto;
   font-family: roboto condensed;
@@ -20,6 +20,7 @@
   gap: 20px;
   cursor: pointer;
 }
+
 .header-nav {
   display: flex;
   align-items: center;

@@ -6,7 +6,7 @@ import APropos from "./Pages/APropos/APropos";
 import LeCabinet from "./Pages/LeCabinet/LeCabinet";
 import Photos from "./Pages/Photos/Photos";
 import Prestations from "./Pages/Prestations/Prestations";
-import Evenements from "./Pages/Evenements/Evenements";
+import Formation from "./Pages/Evenements/Formation";
 
 //Components import
 import Header from "./Components/Header/Header";
@@ -24,7 +24,7 @@ function App() {
         <Route path="/lecabinet" element={<LeCabinet />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/prestations" element={<Prestations />} />
-        <Route path="/evenements" element={<Evenements />} />
+        <Route path="/formation" element={<Formation />} />
       </Routes>
       <Footer />
     </Router>

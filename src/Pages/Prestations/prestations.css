@@ -16,7 +16,20 @@
   text-align: center;
   font-size: 20px;
   margin-top: 30px;
+}
+.prestations-title1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 12px;
   margin-bottom: 40px;
+}
+.prestations-title3 {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .prestations-service-item {
@@ -36,17 +49,19 @@
 
 .prestations-service-info h3 {
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .prestations-service-info p {
   margin: 5px 0;
   font-size: 14px;
+  line-height: 20px;
 }
 
-.prestations-service-item:nth-child(even) {
+/* .prestations-service-item:nth-child(odd) {
   border-right: 1px solid #ccc;
   padding-right: 10px;
-}
+} */
 
 .prestations-service-item img {
   max-width: 100px;
@@ -55,6 +70,46 @@
   object-fit: cover;
   aspect-ratio: 1;
 }
+
+.prestations-service-item1 {
+  display: flex;
+  width: 35%;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+
+.prestations-service-info1 {
+  flex: 1; /* Take up available space */
+}
+
+.prestations-service-info1 h3 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.prestations-service-info1 p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* .prestations-service-item1:nth-child(odd) {
+  border-right: 1px solid #ccc;
+  padding-right: 10px;
+} */
+
+.prestations-service-item1 img {
+  max-width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
 .prestations-modal-overlay {
   position: fixed;
   top: 0;
@@ -102,12 +157,22 @@
   font-size: 16px;
   font-family: "roboto condensed";
 }
+.prestations-modal h2 {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+}
+.prestations-modal p {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 20px;
+}
 
 @media (max-width: 500px) {
   .prestations-service-item {
     width: 80%;
   }
-  .prestations-service-item:nth-child(even) {
+  .prestations-service-item:nth-child(odd) {
     border-right: none;
     padding-right: 10px;
   }
@@ -149,5 +214,19 @@
     color: black;
     font-size: 16px;
     font-family: "roboto condensed";
+  }
+
+  .prestations-title {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  .prestations-title1 {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 12px;
+    margin-bottom: 40px;
   }
 }
