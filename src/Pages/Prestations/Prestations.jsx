@@ -16,6 +16,7 @@ const ServiceModal = ({ service, onClose }) => {
 };
 
 const Prestations = () => {
+  const [expanded, setExpanded] = useState(false);
   const services = [
     {
       title: "Coaching privé",
@@ -36,10 +37,20 @@ const Prestations = () => {
       price: "90 € - 1 h",
     },
     {
-      title: "Drainage lympathique ou remodelage du corps",
+      title: "Drainage lympathique",
+      photo:
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres2-Grande.jpeg",
+      text: "La méthode se distingue par des résultats impressionnants et immédiats. La technique: Réduit les cedèmes. Active la circulation sanguine. Développe un réseau complexe de vaisseaux où circulent les fluides corporelles, combattant la cellulite. Résultats: Un corps moins gonflé, un métabolisme accéléré et une sensation de bien-être. 120 € - 50 min",
+      video:
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
+      price: "120 € - 50 min",
+    },
+
+    {
+      title: "Remodelage du corps",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres7-Grande.jpeg",
-      text: "120 € - 50 min",
+      text: "Le remodelage est une technique de massage manuel dont la principale caractéristique est l'application de mouvements vigoureux, rapides et fermes sur tout le corps. Résultats: Conçu pour modeler les adipocytes, c'est-à-dire déplacer la graisse aux bons endroits, par conséquent, donner plus de contour au corps. Le pincement et le glissement sont quelques-unes des manœuvres qui promettent de donner de nouvelles formes au corps en garantissant une silhouette plus affinée - 120 € - 50 min",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
       price: "120 € - 50 min",
@@ -47,7 +58,7 @@ const Prestations = () => {
     {
       title: "Massage thérapeutique relaxant",
       photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
+        "https://raw.githubusercontent.co/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
       text: "100 € - 50 min",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
@@ -74,7 +85,7 @@ const Prestations = () => {
       price: "190 € - 2 h",
     },
     {
-      title: "Forfait 4 sessions des massages",
+      title: "Forfait 4 sessions de massage RF",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
       text: "Méthode Renata França - 440 € - 50 min",
@@ -83,7 +94,7 @@ const Prestations = () => {
       price: "440 € - 50 min",
     },
     {
-      title: "Forfait 8 sessions des massages",
+      title: "Forfait 8 sessions de massage RF",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
       text: "Méthode Renata França - 840 € - 50 min",
@@ -92,7 +103,7 @@ const Prestations = () => {
       price: "840 € - 50 min",
     },
     {
-      title: "Forfait 10 massages suis RF",
+      title: "Forfait 10 sessions de massage RF",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
       text: "Méthode Renata França - 1000 € - 50 min",
@@ -113,7 +124,7 @@ const Prestations = () => {
       title: "Forfait post-operatoire",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
-      text: "Sur devis - 1 h",
+      text: "Les drainages port-opératoire sont fortement conseillées, 7 à 10 jours après l'opération et d'activer l'élimination de l'oedème. Il est préconisée de faire deux séances de drainage par semaine, pendant une durée minimale de 5 semaines. Liposuccion, abdominoplastie, implants, entre autres. Sur devis - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
       price: "Sur devis - 1 h",

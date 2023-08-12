@@ -3,8 +3,7 @@
   height: 100%;
   background-color: white;
   margin-bottom: 30px;
-  font-family: "roboto condensed";
-  font-weight: bold;
+  font-family: Kanit;
   font-size: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -14,7 +13,8 @@
 .prestations-title {
   width: 100%;
   text-align: center;
-  font-size: 20px;
+  font-size: 22px;
+  font-weight: 300;
   margin-top: 30px;
 }
 .prestations-title1 {
@@ -22,12 +22,14 @@
   text-align: center;
   margin-top: 5px;
   font-size: 12px;
+  font-weight: 200;
   margin-bottom: 40px;
 }
 .prestations-title3 {
   width: 100%;
   text-align: center;
   font-size: 22px;
+  font-weight: 300;
   margin-top: 50px;
   margin-bottom: 20px;
 }
@@ -48,6 +50,8 @@
 }
 
 .prestations-service-info h3 {
+  font-size: 20px;
+  font-weight: 300;
   margin: 0;
   margin-bottom: 10px;
 }
@@ -55,13 +59,9 @@
 .prestations-service-info p {
   margin: 5px 0;
   font-size: 14px;
+  font-weight: 200;
   line-height: 20px;
 }
-
-/* .prestations-service-item:nth-child(odd) {
-  border-right: 1px solid #ccc;
-  padding-right: 10px;
-} */
 
 .prestations-service-item img {
   max-width: 100px;
@@ -87,6 +87,8 @@
 }
 
 .prestations-service-info1 h3 {
+  font-size: 20px;
+  font-weight: 300;
   margin: 0;
   margin-bottom: 10px;
 }
@@ -94,6 +96,7 @@
 .prestations-service-info1 p {
   margin: 5px 0;
   font-size: 14px;
+  font-weight: 200;
   line-height: 20px;
 }
 

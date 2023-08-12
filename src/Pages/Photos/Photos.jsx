@@ -1,4 +1,5 @@
-//Import packages
+// Import packages
+import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -6,17 +7,18 @@ import "./photos.css";
 import drainage from "./drainage.json";
 import pilates from "./pilates.json";
 
+const shuffleArray = (array) => {
+  let shuffledArray = [...array];
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+  }
+  return shuffledArray;
+};
+
 const Photos = () => {
-  const drainageList = drainage.photos.map((photoPath, index) => (
-    <div key={index}>
-      <img src={photoPath} alt={`Photo ${index}`} />
-    </div>
-  ));
-  const pilatesList = pilates.photos.map((photoPath, index) => (
-    <div key={index}>
-      <img src={photoPath} alt={`Photo ${index}`} />
-    </div>
-  ));
+  const shuffledDrainageList = shuffleArray(drainage.photos);
+  const shuffledPilatesList = shuffleArray(pilates.photos);
 
   return (
     <div className="photos-container">
@@ -41,7 +43,11 @@ const Photos = () => {
             useKeyboardArrows={true}
             dynamicHeight={true}
           >
-            {drainageList}
+            {shuffledDrainageList.map((photoPath, index) => (
+              <div key={index}>
+                <img src={photoPath} alt={`Photo ${index}`} />
+              </div>
+            ))}
           </Carousel>
         </div>
         <div>
@@ -61,12 +67,14 @@ const Photos = () => {
             useKeyboardArrows={true}
             dynamicHeight={true}
           >
-            {pilatesList}
+            {shuffledPilatesList.map((photoPath, index) => (
+              <div key={index}>
+                <img src={photoPath} alt={`Photo ${index}`} />
+              </div>
+            ))}
           </Carousel>
         </div>
       </div>
-
-      <div></div>
     </div>
   );
 };
