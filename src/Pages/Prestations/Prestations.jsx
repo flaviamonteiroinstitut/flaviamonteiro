@@ -21,7 +21,7 @@ const Prestations = () => {
     {
       title: "Coaching privé",
       photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/pilates/pilates3.jpeg",
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/coachingprive.jpg",
       text: "Pilates, yoga ou renforcement musculaire - 80 € - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
@@ -30,7 +30,7 @@ const Prestations = () => {
     {
       title: "Coaching 2 personnes",
       photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/pilates/pilates1.jpeg",
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/coachinggroupe.jpg",
       text: "Pilates, yoga ou renforcement musculaire - 90 € - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
