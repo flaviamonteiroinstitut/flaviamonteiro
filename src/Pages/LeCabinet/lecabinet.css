@@ -15,15 +15,16 @@
 .lecabinet-title h2 {
   margin-top: 30px;
   font-size: 22px;
-  font-family: roboto condensed;
-  font-weight: bold;
+  font-family: Kanit;
+  font-weight: 300;
   margin-bottom: 10px; /* Add margin-bottom to separate title and address */
 }
 
 .lecabinet-title h3 {
   font-size: 18px;
-  font-family: roboto condensed;
-  font-weight: bold;
+  font-family: Kanit;
+  color: black;
+  font-weight: 200;
 }
 
 .lecabinet-content {
@@ -44,7 +45,7 @@
 
 .lecabinet-video {
   width: 90%;
-  border: 1px solid gray;
+  border: 2px solid black;
   border-radius: 10px;
   margin: 0 auto;
   overflow: hidden;
@@ -53,7 +54,6 @@
 .lecabinet-photo {
   width: 100%;
   margin: 0 auto; /* Center the photo horizontally */
-
   border: 1px solid gray;
   border-radius: 10px;
 }

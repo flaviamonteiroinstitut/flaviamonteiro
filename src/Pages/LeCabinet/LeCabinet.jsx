@@ -6,10 +6,12 @@ const LeCabinet = () => {
     <div className="lecabinet-container">
       <div className="lecabinet-title">
         <h2>Cabinet Paris Monceau</h2>
-        <h3>
-          12 Rue de Phalsbourg <br />
-          75017 Paris
-        </h3>
+        <a href="https://goo.gl/maps/pz4EMbmXSYWtEMzF6" target="_blank">
+          <h3>
+            12 Rue de Phalsbourg <br />
+            75017 Paris
+          </h3>
+        </a>
       </div>
       <div className="lecabinet-content">
         <div className="lecabinet-video">
