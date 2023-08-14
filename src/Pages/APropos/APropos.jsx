@@ -41,7 +41,7 @@ const Modal = ({ isOpen, onClose }) => {
           corps. Après avoir travaillé au sein de clubs prestigieux de Paris
           comme le groupe Ken Club et L'Usine, elle rejoint l’équipe des coachs
           du Paris Basket pour donner des cours de yoga et de Pilates aux
-          joueurs professionnels du club. L'adaptation des cours pour les pro
+          joueurs professionnels du club. L'adaptation des cours pour les pros
           est toujours un challenge.
         </p>
         <button className="apropos-modal-button" onClick={onClose}>
