@@ -14,16 +14,6 @@ const LeCabinet = () => {
         </a>
       </div>
       <div className="lecabinet-content">
-        <div className="lecabinet-video">
-          <ReactPlayer
-            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/cabinet-video.mp4"
-            controls={true}
-            width="100%"
-            height="100%"
-            showStatus={false}
-            showThumbs={false}
-          />
-        </div>
         <div className="image-container">
           <img
             className="lecabinet-photo"
@@ -46,6 +36,16 @@ const LeCabinet = () => {
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/cabinet/cabinet1new.jpg"
             alt="cabinet"
+          />
+        </div>
+        <div className="lecabinet-video">
+          <ReactPlayer
+            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/cabinet-video.mp4"
+            controls={true}
+            width="100%"
+            height="100%"
+            showStatus={false}
+            showThumbs={false}
           />
         </div>
       </div>
