@@ -57,8 +57,11 @@ const Footer = () => {
         {showLegalMentions && (
           <div className="legal-mentions-text">
             Site web hébergé sur https://www.netlify.com/ <br />
-            Toutes les photos son de la propriété de Flavia Monteiro <br />
-            Site web crée en React.Js by felipefarnetti@gmail.com
+            Toutes les photos sont la propriété de Flavia Monteiro <br />
+            Site web créé en React.Js par felipefarnetti@gmail.com <br />
+            Politique de confidentialité : Aucune donnée personnel est
+            enregistré pendant votre visite y inclus l'usage des cookies. <br />
+            Contact : flaviavkb@gmail.com
             <span
               className="legal-mentions-close"
               onClick={toggleLegalMentions}
