@@ -28,7 +28,7 @@
 }
 .footer-text {
   font-size: 16px;
-  line-height: 15px;
+  line-height: 1.1;
 }
 
 .footer-social {
@@ -71,7 +71,7 @@
   text-align: center;
   margin-top: 10px;
   font-size: 12px;
-  line-height: 1;
+  line-height: 1.2;
   font-family: Kanit;
   font-weight: 200;
 }
