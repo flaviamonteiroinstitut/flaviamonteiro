@@ -1,5 +1,6 @@
 // Import packages
 import React from "react";
+import ReactPlayer from "react-player";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -75,6 +76,76 @@ const Photos = () => {
           </Carousel>
         </div>
       </div>
+      <h2 className="photos-video-area">Galerie de Videos</h2>
+      <ul className="photos-videos">
+        <li>
+          <h3>
+            Remodelage - Drainage lympatique <br /> Méthode Renata França
+          </h3>
+
+          <ReactPlayer
+            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4"
+            controls={true}
+            width="400px"
+            height="auto"
+            style={{
+              borderRadius: "7px",
+              borderBottomLeftRadius: "17px",
+              borderBottomRightRadius: "17px",
+              border: "1px solid white",
+              margin: "0",
+              overflow: "hidden",
+            }} // Add this line
+            showStatus={false}
+            showThumbs={false}
+          />
+        </li>
+        <li>
+          <h3>
+            Pilates <br />
+            <br />
+          </h3>
+
+          <ReactPlayer
+            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/pilates/pilates.mp4"
+            controls={true}
+            width="400px"
+            height="auto"
+            style={{
+              borderRadius: "7px",
+              borderBottomLeftRadius: "17px",
+              borderBottomRightRadius: "17px",
+              border: "1px solid white",
+              margin: "0",
+              overflow: "hidden",
+            }} // Add this line
+            showStatus={false}
+            showThumbs={false}
+          />
+        </li>
+        <li>
+          <h3>
+            Yoga <br />
+          </h3>
+
+          <ReactPlayer
+            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4"
+            controls={true}
+            width="500px"
+            height="auto"
+            style={{
+              borderRadius: "7px",
+              borderBottomLeftRadius: "17px",
+              borderBottomRightRadius: "17px",
+              border: "1px solid white",
+              margin: "0",
+              overflow: "hidden",
+            }} // Add this line
+            showStatus={false}
+            showThumbs={false}
+          />
+        </li>
+      </ul>
     </div>
   );
 };
