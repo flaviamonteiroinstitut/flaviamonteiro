@@ -1,5 +1,5 @@
 //Import packages
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 import "./footer.css";
 import logo from "../../assets/img/logo1.png";
@@ -7,16 +7,10 @@ import insta from "../../assets/img/instagram.png";
 
 const Footer = () => {
   const [showLegalMentions, setShowLegalMentions] = useState(false);
-  const legalMentionsRef = useRef(null);
 
   const toggleLegalMentions = () => {
     setShowLegalMentions(!showLegalMentions);
   };
-
-  const scrollToLegalMentions = () => {
-    legalMentionsRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <div>
       <div className="footer-container">
@@ -57,11 +51,11 @@ const Footer = () => {
         </div>
       </div>
       <address className="footer-mentions">
-        <a href="#!" onClick={scrollToLegalMentions}>
+        <a href="#!" onClick={toggleLegalMentions}>
           Mentions légales
         </a>
         {showLegalMentions && (
-          <div ref={legalMentionsRef} className="legal-mentions-text">
+          <div className="legal-mentions-text">
             Site web hébergé sur https://www.netlify.com/ <br />
             Toutes les photos sont la propriété de Flavia Monteiro <br />
             Site web créé en React.Js par felipefarnetti@gmail.com <br />
