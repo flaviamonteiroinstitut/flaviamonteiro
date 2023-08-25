@@ -7,7 +7,7 @@ const ServiceModal = ({ service, onClose }) => {
       <div className="prestations-modal">
         <h2>{service.title}</h2>
         <p>{service.text}</p>
-        {<img source src={service.photo} alt="" />}
+        <img src={service.photo} alt="" />
         <p>Prix : {service.price}</p>
         <button onClick={onClose}>Fermer</button>
       </div>

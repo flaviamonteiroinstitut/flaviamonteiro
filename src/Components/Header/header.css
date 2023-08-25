@@ -178,3 +178,108 @@
     z-index: 9999;
   }
 }
+
+@media (max-width: 1024px) {
+  .header-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: flex-start;
+    height: 70px; /* Allow the header to grow in height as needed on smaller screens */
+  }
+  .header-logo {
+    display: flex;
+    align-self: center;
+    width: 330px;
+  }
+
+  .header-nav {
+    display: flex;
+  }
+
+  .header-social {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 10px;
+  }
+
+  .header-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .header-menu1 {
+    display: flex;
+    margin-right: 0px;
+  }
+
+  .header-button {
+    width: 100%; /* Make the button fill the available width on smaller screens */
+  }
+
+  /* Show the sandwich button on smaller screens */
+  .header-sandwich {
+    display: flex; /* Show the sandwich button */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px; /* Adjust the left value as needed */
+    top: 30px; /* Adjust the top value as needed */
+  }
+
+  /* Styles for the sandwich icon lines */
+  .header-sandwich span {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: 0.3s;
+  }
+
+  /* Add spacing between the lines to make it look like a sandwich */
+  .header-sandwich span:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  /* Add styles to transform the sandwich icon into an X when active */
+  .header-sandwich.active span:first-child {
+    transform: rotate(45deg) translate(3px, 3px);
+  }
+
+  .header-sandwich.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header-sandwich.active span:last-child {
+    transform: rotate(-45deg) translate(3px, -3px);
+  }
+
+  /* Hide the entire nav menu on mobile devices */
+  .header-nav {
+    display: none;
+  }
+
+  /* Show the entire nav menu when the sandwich icon is active */
+  .header-nav.visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 40%; /* Vertically center the menu */
+    left: 50%; /* Horizontally center the menu */
+    transform: translate(-50%, -50%); /* Adjust to center the menu perfectly */
+    width: 60%; /* Set the width of the menu */
+    max-width: 300px; /* You can adjust the maximum width as needed */
+    background-color: rgba(255, 255, 255, 0.951);
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    z-index: 9999;
+  }
+}
