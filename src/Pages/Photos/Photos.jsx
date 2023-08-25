@@ -80,7 +80,8 @@ const Photos = () => {
       <ul className="photos-videos">
         <li>
           <h3>
-            Remodelage - Drainage lympatique <br /> Méthode Renata França
+            Drainage lymphatique pour femme enceinte
+            <br /> Méthode Renata França
           </h3>
 
           <ReactPlayer
