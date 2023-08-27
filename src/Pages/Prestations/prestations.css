@@ -185,6 +185,13 @@
     border-bottom: 0px;
     padding-right: 10px;
   }
+  .prestations-service-item1 {
+    width: 88%;
+  }
+
+  .prestations-service-info1 {
+    flex: 1; /* Take up available space */
+  }
   .prestations-modal {
     position: relative; /* Change to relative so the overlay can be positioned properly */
     width: 90%;
@@ -325,7 +332,7 @@
 
   .prestations-service-item1 {
     display: flex;
-    width: 35%;
+    width: 42vw;
     align-items: flex-start;
     justify-content: space-between;
     gap: 20px;
@@ -351,11 +358,6 @@
     font-weight: 200;
     line-height: 20px;
   }
-
-  /* .prestations-service-item1:nth-child(odd) {
-    border-right: 1px solid #ccc;
-    padding-right: 10px;
-  } */
 
   .prestations-service-item1 img {
     max-width: 100px;
