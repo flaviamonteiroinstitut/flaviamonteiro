@@ -132,14 +132,14 @@ const Photos = () => {
           <ReactPlayer
             url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4"
             controls={true}
-            width="500px"
+            width="400px"
             height="auto"
             style={{
               borderRadius: "7px",
               borderBottomLeftRadius: "17px",
               borderBottomRightRadius: "17px",
               border: "1px solid white",
-              margin: "0",
+              // margin: "0 auto",
               overflow: "hidden",
             }} // Add this line
             showStatus={false}
