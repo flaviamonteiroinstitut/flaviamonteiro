@@ -105,9 +105,10 @@ const APropos = () => {
             ▪️Formée et diplômée (São Paulo Brésil) au massage de drainage et
             remodelage Méthode Renata França.
             <br />
-            ▪️Après quatre ans de pratique de la méthode RF ainsi que d'autres
-            techniques, j'ai mis au point ma propre méthode qui agit plus
-            particulièrement sur les tissus adipeux et les zones de gonflements
+            ▪️Après quatre ans de pratique de la méthode Renata França ainsi que
+            d'autres techniques, j'ai mis au point ma propre méthode qui agit
+            plus particulièrement sur les tissus adipeux et les zones de
+            gonflements
             <br />
             ▪️Coach de Yoga et Pilates des joueurs Paris Basket.
           </p>
