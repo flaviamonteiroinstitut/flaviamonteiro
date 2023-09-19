@@ -45,6 +45,15 @@ const Prestations = () => {
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
       price: "120 € - 50 min",
     },
+    {
+      title: "Drainage lympathique Plus",
+      photo:
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres6-Grande.jpeg",
+      text: "Une efficacité redoutable pour les troubles circulatoires et gonflements dus à la mauvaise circulation du sang et la lymphe. 120 € - 50 min",
+      video:
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
+      price: "120 € - 50 min",
+    },
 
     {
       title: "Remodelage du corps",

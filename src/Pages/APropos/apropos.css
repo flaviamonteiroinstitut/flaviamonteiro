@@ -25,11 +25,12 @@
   width: 100%;
   gap: 20px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .apropos-carousel {
   width: 55%;
+  margin-top: 20px;
   margin-left: 20px;
   border: 1px solid black;
   border-radius: 7px;
@@ -40,7 +41,7 @@
   width: 45%;
   text-align: justify;
   margin-right: 20px;
-  margin-top: 30px;
+  margin-top: 10px;
   font-family: Kanit;
   font-weight: 200;
   font-size: 18px;
@@ -48,7 +49,7 @@
 }
 .apropos-carousel1 {
   width: 40%;
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 30px;
   margin: 0 auto;
   border: 1px solid black;
