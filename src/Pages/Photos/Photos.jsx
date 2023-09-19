@@ -87,7 +87,7 @@ const Photos = () => {
           <ReactPlayer
             url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4"
             controls={true}
-            width="400px"
+            width="380px"
             height="auto"
             style={{
               borderRadius: "7px",
@@ -110,7 +110,7 @@ const Photos = () => {
           <ReactPlayer
             url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/pilates/pilates.mp4"
             controls={true}
-            width="400px"
+            width="380px"
             height="auto"
             style={{
               borderRadius: "7px",

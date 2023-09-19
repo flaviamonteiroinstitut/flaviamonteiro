@@ -1,5 +1,5 @@
 .photos-container {
-  width: 100%;
+  width: 98%;
   /* height: 100%; */
   /* border: solid black 1px; */
   background-color: white;
@@ -42,7 +42,7 @@
 }
 
 .photos-carousel-options {
-  width: 400px;
+  width: 380px;
   height: 100% !important;
   object-fit: cover;
   border: 1px solid black;
