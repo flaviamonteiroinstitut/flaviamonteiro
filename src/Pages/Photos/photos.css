@@ -1,11 +1,12 @@
 .photos-container {
-  width: 98%;
+  width: 99%;
   /* height: 100%; */
   /* border: solid black 1px; */
   background-color: white;
   margin-bottom: 50px;
   font-family: Kanit;
   font-size: 20px;
+  overflow-x: hidden;
 }
 
 .photos-container h3 {
