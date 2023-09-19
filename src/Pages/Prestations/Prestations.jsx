@@ -37,16 +37,16 @@ const Prestations = () => {
       price: "90 € - 1 h",
     },
     {
-      title: "Drainage lympathique",
+      title: "Drainage lympathique RF",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres2-Grande.jpeg",
-      text: "La méthode se distingue par des résultats impressionnants et immédiats. La technique: Réduit les cedèmes. Active la circulation sanguine. Développe un réseau complexe de vaisseaux où circulent les fluides corporelles, combattant la cellulite. Résultats: Un corps moins gonflé, un métabolisme accéléré et une sensation de bien-être. 120 € - 50 min",
+      text: "La méthode Renata França se distingue par des résultats impressionnants et immédiats. La technique: Réduit les cedèmes. Active la circulation sanguine. Développe un réseau complexe de vaisseaux où circulent les fluides corporelles, combattant la cellulite. Résultats: Un corps moins gonflé, un métabolisme accéléré et une sensation de bien-être. 120 € - 50 min",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
       price: "120 € - 50 min",
     },
     {
-      title: "Drainage lympathique Plus",
+      title: "Drainage Plus",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres6-Grande.jpeg",
       text: "Une efficacité redoutable pour les troubles circulatoires et gonflements dus à la mauvaise circulation du sang et la lymphe. 120 € - 50 min",
