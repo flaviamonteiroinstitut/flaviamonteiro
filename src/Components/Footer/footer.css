@@ -19,6 +19,7 @@
 .footer-items {
   display: flex;
   flex-direction: column;
+  margin-right: 10px;
 }
 
 .footer-title {
@@ -31,8 +32,14 @@
   line-height: 1.1;
 }
 
+.footer-text a {
+  text-decoration: none;
+  color: black;
+}
+
 .footer-social {
   display: flex;
+  text-align: center;
   gap: 25px;
   margin-right: 40px;
 }

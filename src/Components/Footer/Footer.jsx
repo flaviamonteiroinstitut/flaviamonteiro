@@ -20,9 +20,11 @@ const Footer = () => {
         <div className="footer-items">
           <span className="footer-title">Le Cabinet</span>
           <span className="footer-text">
-            12 Rue de Phalsbourg <br />
-            75017 Paris
-          </span>
+    <a href="https://www.google.com/maps?q=12+Rue+de+Phalsbourg,+75017+Paris" target="_blank" rel="noopener noreferrer">
+      12 Rue de Phalsbourg <br />
+      75017 Paris
+    </a>
+  </span>
         </div>
         <div className="footer-items">
           <span className="footer-title">Me Contacter</span>
@@ -57,11 +59,10 @@ const Footer = () => {
         {showLegalMentions && (
           <div className="legal-mentions-text">
             Site web hébergé sur https://www.netlify.com/ <br />
-            Toutes les photos sont de la propriété de Flavia Monteiro <br />
+            Toutes les photographies présentes sur ce site sont la propriété exclusive de Flavia Monteiro. Toute reproduction ou utilisation sans autorisation expresse est strictement interdite. <br />
             Site web créé en React.Js par felipefarnetti@gmail.com <br />
-            Politique de confidentialité : Aucune donnée personnel est
-            enregistré pendant votre visite y inclus l'usage des cookies. <br />
-            Contact : flaviavkb@gmail.com
+            Politique de confidentialité : Aucune donnée personnelle n'est collectée ni stockée lors de votre visite sur ce site. Nous n'utilisons pas de cookies pour collecter des informations personnelles. <br />
+            Pour toute question ou demande d'information, vous pouvez nous contacter à l'adresse suivante : flaviavkb@gmail.com
             <span
               className="legal-mentions-close"
               onClick={toggleLegalMentions}
