@@ -20,11 +20,11 @@ const Footer = () => {
         <div className="footer-items">
           <span className="footer-title">Le Cabinet</span>
           <span className="footer-text">
-    <a href="https://www.google.com/maps?q=12+Rue+de+Phalsbourg,+75017+Paris" target="_blank" rel="noopener noreferrer">
-      12 Rue de Phalsbourg <br />
-      75017 Paris
-    </a>
-  </span>
+           <a href="https://www.google.com/maps?q=12+Rue+de+Phalsbourg,+75017+Paris" target="_blank" rel="noopener noreferrer">
+             12 Rue de Phalsbourg <br />
+             75017 Paris
+             </a>
+          </span>
         </div>
         <div className="footer-items">
           <span className="footer-title">Me Contacter</span>
