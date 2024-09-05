@@ -37,41 +37,31 @@ const Prestations = () => {
       price: "90 € - 1 h",
     },
     {
-      title: "Drainage lympathique RF",
+      title: "Drainage lympathique ou remodelage du corps",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres2-Grande.jpeg",
-      text: "La méthode Renata França se distingue par des résultats impressionnants et immédiats. La technique: Réduit les cedèmes. Active la circulation sanguine. Développe un réseau complexe de vaisseaux où circulent les fluides corporelles, combattant la cellulite. Résultats: Un corps moins gonflé, un métabolisme accéléré et une sensation de bien-être. 120 € - 50 min",
+      text: "Drainage lymphatique: Réduit les cedèmes, active la circulation sanguine, développe un réseau complexe de vaisseaux où circulent les fluides corporelles, combattant la cellulite. Remodelage du corps: Conçu pour modeler les adipocytes, c'est-à-dire déplacer la graisse aux bons endroits, par conséquent, donner plus de contour au corps. 120 € - 50 min",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
       price: "120 € - 50 min",
     },
     {
-      title: "Drainage Plus",
+      title: "Massage Drainage Plus",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres6-Grande.jpeg",
-      text: "Une efficacité redoutable pour les troubles circulatoires et gonflements dus à la mauvaise circulation du sang et la lymphe. 120 € - 50 min",
+      text: "Après avoir suivi plusieurs formations et appris diverses techniques, j'ai développé le Drainege Plus, c'est un peu plus qu'un drainage classique, travaillant également les tissus adipeux et le dégonflement du corps. 120 € - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "120 € - 50 min",
-    },
-
-    {
-      title: "Remodelage du corps",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres7-Grande.jpeg",
-      text: "Le remodelage est une technique de massage manuel dont la principale caractéristique est l'application de mouvements vigoureux, rapides et fermes sur tout le corps. Résultats: Conçu pour modeler les adipocytes, c'est-à-dire déplacer la graisse aux bons endroits, par conséquent, donner plus de contour au corps. Le pincement et le glissement sont quelques-unes des manœuvres qui promettent de donner de nouvelles formes au corps en garantissant une silhouette plus affinée - 120 € - 50 min",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "120 € - 50 min",
+      price: "120 € - 1 h",
     },
     {
       title: "Massage thérapeutique relaxant",
       photo:
         "https://raw.githubusercontent.co/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
-      text: "100 € - 50 min",
+      text: "120 € - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
-      price: "100 € - 50 min",
+      price: "120 € - 1 h",
     },
     {
       title: "Drainage lymphatique ou remodelage du corps home care ",
@@ -80,7 +70,34 @@ const Prestations = () => {
       text: "Prestation à domicile - 150 € - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
-      price: "50 €",
+      price: "150 €",
+    },
+    {
+      title: "Drain Face",
+      photo:
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres4-Grande.jpeg",
+      text: "Massage et drainage lymphatique du visage. Un vrai bonheur pour détendre le visage et apaiser les traits - 150 € - 30 min",
+      video:
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
+      price: "70 €",
+    },
+    {
+      title: "Drainage lymphatique et EMSZERO",
+      photo:
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres4-Grande.jpeg",
+      text: "L'appareil de sculpture...... - 180 € - 1h30 min",
+      video:
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
+      price: "180 €",
+    },
+    {
+      title: "EMSZERO",
+      photo:
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres4-Grande.jpeg",
+      text: "L'appareil de sculpture corporel..... - 80 € - 30 min",
+      video:
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
+      price: "80 €",
     },
   ];
   const forfaits = [
@@ -137,6 +154,15 @@ const Prestations = () => {
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
       price: "Sur devis - 1 h",
+    },
+    {
+      title: "Forfait 4 séances EMSZERO",
+      photo:
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
+      text: "280 € - 30 min",
+      video:
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
+      price: "280 € - 30 min",
     },
   ];
 
