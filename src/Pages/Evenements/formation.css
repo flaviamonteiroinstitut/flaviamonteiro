@@ -3,7 +3,7 @@
   margin: 0 auto;
   height: 600px; /* Set a fixed height or adjust as needed */
   background-color: white;
-  margin-bottom: 30px;
+  margin-bottom: 45px;
   font-family: Kanit, sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -14,7 +14,6 @@
 .formation-container iframe {
   position: absolute;
   margin-top: 30px;
-  margin-bottom: 20px;
   top: 0;
   left: 0;
   width: 100%;
