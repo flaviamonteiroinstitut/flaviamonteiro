@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
 import "./formation.css"
-require('dotenv').config()
 
 const formation = () => {
   const [events, setEvents] = useState([]);
-  const CALENDAR_ID = "felipefarnetti@group.calendar.google.com";
+
+  const CLIENT_ID = "475720912712-pv1mg95gif67dc7offrrc9d6q99lin0q.apps.googleusercontent.com";
+  const API_KEY = "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";
+  const CALENDAR_ID = "your_calendar_id@group.calendar.google.com";
 
   useEffect(() => {
-    const initClient = () => {
+    const initClient = () => {nù
       gapi.client.init({
-        apiKey: process.env.API_KEY,
-        clientId: process.env.CLIENT_ID,
+        apiKey: API_KEY,
+        clientId: CLIENT_ID,
         discoveryDocs: ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"],
         scope: "https://www.googleapis.com/auth/calendar.readonly",
       }).then(() => {
