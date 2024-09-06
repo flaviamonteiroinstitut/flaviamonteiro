@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
-import "./formation.css"
 
-const formation = () => {
+const CalendarApp = () => {
   const [events, setEvents] = useState([]);
 
   const CLIENT_ID = "475720912712-pv1mg95gif67dc7offrrc9d6q99lin0q.apps.googleusercontent.com";
@@ -43,7 +42,7 @@ const formation = () => {
   };
 
   return (
-    <div classname="formation-container">
+    <div>
       <h1>Upcoming Events</h1>
       <ul>
         {events.map((event) => (
@@ -56,4 +55,4 @@ const formation = () => {
   );
 };
 
-export default formation;
+export default CalendarApp;
