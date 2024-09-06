@@ -13,6 +13,7 @@
 
 .formation-container iframe {
   position: absolute;
+  margin-top: 30px;
   top: 0;
   left: 0;
   width: 100%;
