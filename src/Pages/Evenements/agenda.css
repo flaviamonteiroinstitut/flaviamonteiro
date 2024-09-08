@@ -1,0 +1,17 @@
+.formation-container {
+  width: 90%;
+  margin: 0 auto;
+  height: 80vh; /* The height is now dynamic based on the viewport */
+  background-color: white;
+  margin-bottom: 45px;
+  font-family: Kanit, sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+}
+
+.formation-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
