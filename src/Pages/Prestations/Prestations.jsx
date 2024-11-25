@@ -76,7 +76,7 @@ const Prestations = () => {
       title: "Drain Face",
       photo:
         "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres4-Grande.jpeg",
-      text: "Massage et drainage lymphatique du visage. Un vrai bonheur pour détendre le visage et apaiser les traits - 150 € - 30 min",
+      text: "Massage et drainage lymphatique du visage. Un vrai bonheur pour détendre le visage et apaiser les traits - 70 € - 30 min",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
       price: "70 €",
