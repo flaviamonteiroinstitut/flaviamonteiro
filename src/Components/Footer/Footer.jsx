@@ -18,14 +18,32 @@ const Footer = () => {
           <img className="footer-logo" src={logo} alt="Logo" />
         </div>
         <div className="footer-items">
-          <span className="footer-title">Le Cabinet</span>
+          <span className="footer-title">Cabinet Monceau</span>
           <span className="footer-text">
-           <a href="https://www.google.com/maps?q=12+Rue+de+Phalsbourg,+75017+Paris" target="_blank" rel="noopener noreferrer">
-             12 Rue de Phalsbourg <br />
-             75017 Paris
-             </a>
+            <a
+              href="https://maps.app.goo.gl/zG7tKkjWNvg8mWBN7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              12 Rue de Phalsbourg <br />
+              75017 Paris
+            </a>
           </span>
         </div>
+        <div className="footer-items">
+          <span className="footer-title">Cabinet Douai</span>
+          <span className="footer-text">
+            <a
+              href="https://maps.app.goo.gl/6nwRR1TevA7pr9L56"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              5 Rue de Douai <br />
+              75009 Paris
+            </a>
+          </span>
+        </div>
+
         <div className="footer-items">
           <span className="footer-title">Me Contacter</span>
           <span className="footer-text">07 81 98 84 89</span>
@@ -59,10 +77,16 @@ const Footer = () => {
         {showLegalMentions && (
           <div className="legal-mentions-text">
             Site web hébergé sur https://www.netlify.com/ <br />
-            Toutes les photographies présentes sur ce site sont la propriété exclusive de Flavia Monteiro. Toute reproduction ou utilisation sans autorisation expresse est strictement interdite. <br />
+            Toutes les photographies présentes sur ce site sont la propriété
+            exclusive de Flavia Monteiro. Toute reproduction ou utilisation sans
+            autorisation expresse est strictement interdite. <br />
             Site web créé en React.Js par felipefarnetti@gmail.com <br />
-            Politique de confidentialité : Aucune donnée personnelle n'est collectée ni stockée lors de votre visite sur ce site. Nous n'utilisons pas de cookies pour collecter des informations personnelles. <br />
-            Pour toute question ou demande d'information, vous pouvez nous contacter à l'adresse suivante : flaviavkb@gmail.com
+            Politique de confidentialité : Aucune donnée personnelle n'est
+            collectée ni stockée lors de votre visite sur ce site. Nous
+            n'utilisons pas de cookies pour collecter des informations
+            personnelles. <br />
+            Pour toute question ou demande d'information, vous pouvez nous
+            contacter à l'adresse suivante : flaviavkb@gmail.com
             <span
               className="legal-mentions-close"
               onClick={toggleLegalMentions}
