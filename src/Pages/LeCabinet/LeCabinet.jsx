@@ -11,6 +11,7 @@ const LeCabinet = () => {
             12 Rue de Phalsbourg <br />
             75017 Paris
           </h3>
+          <br />
         </a>
       </div>
       <div className="lecabinet-content">

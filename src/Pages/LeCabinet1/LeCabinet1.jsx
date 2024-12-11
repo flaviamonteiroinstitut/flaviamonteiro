@@ -11,30 +11,31 @@ const LeCabinet1 = () => {
             5 Rue de Douai <br />
             75009 Paris
           </h3>
+          <br />
         </a>
       </div>
       <div className="lecabinet-content">
         <div className="image-container">
           <img
             className="lecabinet-photo"
-            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/cabinet/cabinet4new.jpg"
+            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/1.jpg"
             alt="cabinet"
           />
           <img
             className="lecabinet-photo"
-            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/cabinet/cabinet3new.jpg"
+            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/2.jpg"
             alt="cabinet"
           />
         </div>
         <div className="image-container">
           <img
             className="lecabinet-photo"
-            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/cabinet/cabinet2new.jpg"
+            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/3.jpg"
             alt="cabinet"
           />
           <img
             className="lecabinet-photo"
-            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/cabinet/cabinet1new.jpg"
+            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/4.jpg"
             alt="cabinet"
           />
         </div>
