@@ -1,4 +1,3 @@
-//Import packages
 import React, { useState } from "react";
 
 import "./footer.css";
@@ -11,6 +10,7 @@ const Footer = () => {
   const toggleLegalMentions = () => {
     setShowLegalMentions(!showLegalMentions);
   };
+
   return (
     <div>
       <div className="footer-container">
