@@ -43,7 +43,8 @@ const Header = () => {
       <nav className={`header-nav ${isMenuVisible ? "visible" : ""}`}>
         <ul className="header-menu">
           <li onClick={() => handleItemClick("/apropos")}>À propos de moi</li>
-          <li onClick={() => handleItemClick("/lecabinet")}>Le cabinet</li>
+          <li onClick={() => handleItemClick("/monceau")}>*Monceau</li>
+          <li onClick={() => handleItemClick("/douai")}>*Douai</li>
           <li onClick={() => handleItemClick("/photos")}>Galerie</li>
           <li onClick={() => handleItemClick("/prestations")}>Prestations</li>
           <li onClick={() => handleItemClick("/agenda")}>Cours</li>

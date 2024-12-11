@@ -1,15 +1,15 @@
 import ReactPlayer from "react-player";
-import "./lecabinet.css";
+import "./lecabinet1.css";
 
-const LeCabinet = () => {
+const LeCabinet1 = () => {
   return (
     <div className="lecabinet-container">
       <div className="lecabinet-title">
-        <h2>Cabinet Paris Monceau</h2>
-        <a href="https://maps.app.goo.gl/zG7tKkjWNvg8mWBN7" target="_blank">
+        <h2>Cabinet Paris Douai</h2>
+        <a href="https://maps.app.goo.gl/qv8px8pFNHRPRz6Z8" target="_blank">
           <h3>
-            12 Rue de Phalsbourg <br />
-            75017 Paris
+            5 Rue de Douai <br />
+            75009 Paris
           </h3>
         </a>
       </div>
@@ -38,7 +38,7 @@ const LeCabinet = () => {
             alt="cabinet"
           />
         </div>
-        <div className="lecabinet-video">
+        {/* <div className="lecabinet-video">
           <ReactPlayer
             url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/cabinet-video.mp4"
             controls={true}
@@ -47,10 +47,10 @@ const LeCabinet = () => {
             showStatus={false}
             showThumbs={false}
           />
-        </div>
+        </div> */}
       </div>
     </div>
   );
 };
 
-export default LeCabinet;
+export default LeCabinet1;
