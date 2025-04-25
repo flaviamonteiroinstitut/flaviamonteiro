@@ -57,7 +57,7 @@ const Prestations = () => {
     {
       title: "Massage thérapeutique relaxant",
       photo:
-        "https://raw.githubusercontent.co/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/massage/massagerelaxante.jpeg",
+        "https://raw.githubusercontent.co/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/massage/massagerelaxante.jpg",
       text: "120 € - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
@@ -84,7 +84,7 @@ const Prestations = () => {
     {
       title: "Drainage lymphatique et EMSZERO",
       photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/ems/emszero.jpeg",
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/ems/emszero.jpg",
       text: "L'appareil de sculpture...... - 180 € - 1h30 min",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
@@ -93,7 +93,7 @@ const Prestations = () => {
     {
       title: "EMSZERO",
       photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/ems/emszero.jpeg",
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/ems/emszero.jpg",
       text: "L'appareil de sculpture corporel..... - 80 € - 30 min",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
