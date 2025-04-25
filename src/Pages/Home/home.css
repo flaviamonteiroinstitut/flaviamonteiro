@@ -1,3 +1,4 @@
+/* Style for the background overlay */
 .home-background {
   position: relative;
   overflow: hidden;
@@ -5,8 +6,9 @@
   height: 100vh;
 }
 
+/* Styling for the overlay (container) */
 .home-overlay {
-  position: relative;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -14,15 +16,17 @@
   background-image: url("https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/new-backgroung.jpg");
   background-size: cover;
   background-position: center;
-  /* z-index: -1; */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  justify-content: flex-end; /* Align buttons to the bottom */
+  align-items: center;
+
 }
+
+/* Common button styling */
 .home-button {
-  position: absolute;
-  bottom: 4%; /* Adjust the value to position the button as needed */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  width: 110px;
+  position: relative;
+  width: 140px;
   height: 35px;
   background-color: #fcf2dd;
   border: black 1px solid;
@@ -33,19 +37,42 @@
   font-weight: 200;
   text-align: center;
   cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Position the first button */
+.home-button:first-of-type {
+  z-index: 1; /* Front button */
+}
+
+/* Position the second button */
+.second-button {
+  z-index: 0; /* Back button */
 }
 
 /* Media query for screens with width 520px or less */
 @media (max-width: 520px) {
   .home-overlay {
-    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    justify-content: flex-end; /* Align buttons to the bottom */
+    align-items: center;
   }
 
+  /* Button styling for mobile */
   .home-button {
-    position: absolute;
-    bottom: 100px; /* Adjust the value to position the button as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
+    width: 130px; /* Adjust width for mobile */
+    height: 30px; /* Adjust height for mobile */
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .home-button:first-of-type {
+    bottom: 50px; /* Position the first button */
+    z-index: 1; /* Ensure it stays in front */
+  }
+
+  .second-button {
+    bottom: 100px; /* Position the second button below the first one */
+    z-index: 0; /* Ensure it stays behind the first one */
   }
 }

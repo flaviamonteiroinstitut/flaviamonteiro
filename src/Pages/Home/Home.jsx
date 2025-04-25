@@ -9,7 +9,14 @@ const Home = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="home-button">RESERVER</button>
+          <button className="home-button">Réserver Monceau</button>
+        </a>
+        <a
+          href="https://www.planity.com/studio-fla-75009-paris"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="home-button second-button">Réserver Pigalle</button>
         </a>
       </div>
     </div>
