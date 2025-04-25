@@ -30,14 +30,16 @@ const LeCabinet1 = () => {
         <div className="image-container">
           <img
             className="lecabinet-photo"
-            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/6.jpg"
+            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/5.jpg"
             alt="cabinet"
           />
           <img
             className="lecabinet-photo"
-            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/4.jpg"
+            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/6.jpg"
             alt="cabinet"
           />
+              </div>
+              <div className="image-container">
             <img
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/7.jpg"
@@ -48,6 +50,8 @@ const LeCabinet1 = () => {
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/8.jpg"
             alt="cabinet"
           />
+          </div>
+            <div className="image-container">
             <img
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/10.jpg"
@@ -56,6 +60,18 @@ const LeCabinet1 = () => {
              <img
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/11.jpg"
+            alt="cabinet"
+          />
+        </div>
+        <div className="image-container">
+            <img
+            className="lecabinet-photo"
+            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/6.jpg"
+            alt="cabinet"
+          />
+             <img
+            className="lecabinet-photo"
+            src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/3.jpg"
             alt="cabinet"
           />
         </div>
