@@ -21,7 +21,7 @@ const Prestations = () => {
     {
       title: "Coaching privé",
       photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/coachingprive.jpg",
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/coachingprive.jpg",
       text: "Pilates, yoga ou renforcement musculaire - 80 € - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
@@ -30,7 +30,7 @@ const Prestations = () => {
     {
       title: "Coaching 2 personnes",
       photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/coachinggroupe.jpg",
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/coachinggroupe.jpg",
       text: "Pilates, yoga ou renforcement musculaire - 90 € - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
@@ -39,7 +39,7 @@ const Prestations = () => {
     {
       title: "Drainage lympathique ou remodelage du corps",
       photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres2-Grande.jpeg",
+        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/drainage/avantapres2-Grande.jpeg",
       text: "Drainage lymphatique: Réduit les cedèmes, active la circulation sanguine, développe un réseau complexe de vaisseaux où circulent les fluides corporelles, combattant la cellulite. Remodelage du corps: Conçu pour modeler les adipocytes, c'est-à-dire déplacer la graisse aux bons endroits, par conséquent, donner plus de contour au corps. 120 € - 50 min",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
@@ -57,7 +57,7 @@ const Prestations = () => {
     {
       title: "Massage thérapeutique relaxant",
       photo:
-        "https://raw.githubusercontent.co/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/massage/massagerelaxante.jpg",
+        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/massage/massagerelaxante.jpg",
       text: "120 € - 1 h",
       video:
         "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
