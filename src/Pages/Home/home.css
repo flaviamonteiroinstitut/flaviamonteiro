@@ -26,7 +26,7 @@
 /* Common button styling */
 .home-button {
   position: relative;
-  width: 140px;
+  width: 150px;
   height: 35px;
   background-color: #fcf2dd;
   border: black 1px solid;
@@ -61,7 +61,7 @@
 
   /* Button styling for mobile */
   .home-button {
-    width: 130px; /* Adjust width for mobile */
+    width: 150px; /* Adjust width for mobile */
     height: 30px; /* Adjust height for mobile */
     font-size: 14px; /* Smaller font size for mobile */
   }
