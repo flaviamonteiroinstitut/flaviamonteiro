@@ -1,429 +1,242 @@
+/* ===== PRESTATIONS ===== */
 .prestations-container {
   width: 100%;
-  height: 100%;
-  background-color: white;
-  margin-bottom: 30px;
-  font-family: Kanit;
-  font-size: 20px;
+  background-color: var(--color-bg);
+  padding-bottom: 50px;
+  font-family: var(--font-heading);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 20px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .prestations-title {
   width: 100%;
   text-align: center;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 300;
-  margin-top: 30px;
+  margin-top: 40px;
+  letter-spacing: 0.5px;
 }
+
 .prestations-title1 {
   width: 100%;
   text-align: center;
-  margin-top: 5px;
-  font-size: 12px;
-  font-weight: 200;
-  margin-bottom: 40px;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--color-text-light);
+  margin-bottom: 30px;
+  font-family: var(--font-body);
 }
+
 .prestations-title3 {
   width: 100%;
   text-align: center;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 300;
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
+/* ===== SERVICE CARDS ===== */
 .prestations-service-item {
   display: flex;
-  width: 35%;
+  width: 420px;
   align-items: flex-start;
-  justify-content: space-between;
   gap: 20px;
   cursor: pointer;
-  border-bottom: 1px solid #ccc;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-md);
   padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.prestations-service-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.prestations-last-item {
+  border-bottom: none;
 }
 
 .prestations-service-info {
-  flex: 1; /* Take up available space */
+  flex: 1;
 }
 
 .prestations-service-info h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
-  margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  color: var(--color-text);
 }
 
 .prestations-service-info p {
-  margin: 5px 0;
-  font-size: 14px;
-  font-weight: 200;
-  line-height: 20px;
+  margin: 4px 0;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  font-family: var(--font-body);
 }
 
 .prestations-service-item img {
-  max-width: 100px;
-  height: 100px;
-  border-radius: 8px;
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-sm);
   object-fit: cover;
-  aspect-ratio: 1;
+  flex-shrink: 0;
 }
 
+/* ===== FORFAIT CARDS ===== */
 .prestations-service-item1 {
   display: flex;
-  width: 35%;
+  width: 420px;
   align-items: flex-start;
-  justify-content: space-between;
   gap: 20px;
-  cursor: pointer;
-  border-bottom: 1px solid #ccc;
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-md);
   padding: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.prestations-service-item1:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
 .prestations-service-info1 {
-  flex: 1; /* Take up available space */
+  flex: 1;
 }
 
 .prestations-service-info1 h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
-  margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  color: var(--color-text);
 }
 
 .prestations-service-info1 p {
-  margin: 5px 0;
-  font-size: 14px;
-  font-weight: 200;
-  line-height: 20px;
+  margin: 4px 0;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  font-family: var(--font-body);
 }
-
-/* .prestations-service-item1:nth-child(odd) {
-  border-right: 1px solid #ccc;
-  padding-right: 10px;
-} */
 
 .prestations-service-item1 img {
-  max-width: 100px;
-  height: 100px;
-  border-radius: 8px;
+  width: 90px;
+  height: 90px;
+  border-radius: var(--radius-sm);
   object-fit: cover;
-  aspect-ratio: 1;
+  flex-shrink: 0;
 }
 
+/* ===== MODAL ===== */
 .prestations-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
-  z-index: 1; /* Place the overlay above other content */
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeOverlay 0.3s ease;
 }
+
+@keyframes fadeOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .prestations-modal {
-  position: relative; /* Change to relative so the overlay can be positioned properly */
-  width: 35vw;
-  height: auto;
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  z-index: 2; /* Place the modal above the overlay */
+  width: 90%;
+  max-width: 480px;
+  max-height: 80vh;
+  background-color: var(--color-bg-alt);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  z-index: 1001;
   overflow-y: auto;
-  justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.35s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .prestations-modal img {
-  width: 90%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  width: 100%;
+  margin: 12px 0;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
-.prestations-modal button {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 90px;
-  border-radius: 5px;
-  cursor: pointer;
-  border: 1px solid black;
-  background-color: blanchedalmond;
-  color: black;
-  font-size: 16px;
-  font-family: Kanit;
-  font-weight: 200;
-}
 .prestations-modal h2 {
-  margin-top: 15px;
-  font-size: 20px;
+  margin-top: 8px;
+  font-size: 22px;
   text-align: center;
+  color: var(--color-accent);
 }
+
 .prestations-modal p {
   margin-top: 10px;
   font-size: 14px;
   text-align: justify;
-  line-height: 20px;
+  line-height: 1.7;
+  font-family: var(--font-body);
+  color: var(--color-text);
 }
 
-@media (max-width: 800px) {
-  .prestations-service-item {
-    width: 88%;
-  }
-  .prestations-service-item:nth-child(odd) {
-    border-right: none;
-    padding-right: 10px;
-  }
-  .prestations-service-item:last-child {
-    border-bottom: 0px;
-    padding-right: 10px;
-  }
+.prestations-modal button {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  padding: 8px 28px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid var(--color-accent);
+  background-color: transparent;
+  color: var(--color-accent);
+  font-size: 14px;
+  font-family: var(--font-heading);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  transition: all var(--transition);
+}
+
+.prestations-modal button:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .prestations-service-item,
   .prestations-service-item1 {
-    width: 88%;
-  }
-
-  .prestations-service-info1 {
-    flex: 1; /* Take up available space */
-  }
-  .prestations-modal {
-    position: relative; /* Change to relative so the overlay can be positioned properly */
     width: 90%;
-    height: auto;
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
-    z-index: 2; /* Place the modal above the overlay */
-    overflow-y: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .prestations-modal img {
-    width: 90%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-  .prestations-modal h2 {
-    margin-top: 15px;
-    font-size: 20px;
-    text-align: center;
-  }
-  .prestations-modal p {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 14px;
-    text-align: justify;
-    line-height: 20px;
-  }
-  .prestations-modal button {
-    margin-top: 15px;
-    margin-bottom: 10px;
-    width: 90px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    color: black;
-    font-size: 16px;
-    font-family: Kanit;
-    font-weight: 200;
   }
 
   .prestations-title {
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    margin-top: 30px;
-  }
-  .prestations-title1 {
-    width: 100%;
-    text-align: center;
-    margin-top: 5px;
-    font-size: 12px;
-    margin-bottom: 40px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .prestations-container {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    margin-bottom: 30px;
-    font-family: Kanit;
-    font-size: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .prestations-title {
-    width: 100%;
-    text-align: center;
     font-size: 22px;
-    font-weight: 300;
-    margin-top: 30px;
-  }
-  .prestations-title1 {
-    width: 100%;
-    text-align: center;
-    margin-top: 5px;
-    font-size: 12px;
-    font-weight: 200;
-    margin-bottom: 40px;
-  }
-  .prestations-title3 {
-    width: 100%;
-    text-align: center;
-    font-size: 22px;
-    font-weight: 300;
-    margin-top: 50px;
-    margin-bottom: 20px;
-  }
-
-  .prestations-service-item {
-    display: flex;
-    width: 42vw;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-    padding: 20px;
-  }
-
-  .prestations-service-info {
-    flex: 1; /* Take up available space */
-  }
-
-  .prestations-service-info h3 {
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-
-  .prestations-service-info p {
-    margin: 5px 0;
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 20px;
-  }
-
-  .prestations-service-item img {
-    max-width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    object-fit: cover;
-    aspect-ratio: 1;
-  }
-
-  .prestations-service-item1 {
-    display: flex;
-    width: 42vw;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
-    cursor: pointer;
-    border-bottom: 1px solid #ccc;
-    padding: 20px;
-  }
-
-  .prestations-service-info1 {
-    flex: 1; /* Take up available space */
-  }
-
-  .prestations-service-info1 h3 {
-    font-size: 20px;
-    font-weight: 300;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-
-  .prestations-service-info1 p {
-    margin: 5px 0;
-    font-size: 14px;
-    font-weight: 200;
-    line-height: 20px;
-  }
-
-  .prestations-service-item1 img {
-    max-width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    object-fit: cover;
-    aspect-ratio: 1;
-  }
-
-  .prestations-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
-    z-index: 1; /* Place the overlay above other content */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .prestations-modal {
-    position: relative; /* Change to relative so the overlay can be positioned properly */
-    width: 35vw;
-    height: auto;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    z-index: 2; /* Place the modal above the overlay */
-    overflow-y: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .prestations-modal img {
-    width: 90%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid black;
-    border-radius: 10px;
-  }
-
-  .prestations-modal button {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 90px;
-    border-radius: 5px;
-    cursor: pointer;
-    border: 1px solid black;
-    background-color: blanchedalmond;
-    color: black;
-    font-size: 16px;
-    font-family: Kanit;
-    font-weight: 200;
-  }
-  .prestations-modal h2 {
-    margin-top: 15px;
-    font-size: 20px;
-    text-align: center;
-  }
-  .prestations-modal p {
-    margin-top: 10px;
-    font-size: 14px;
-    text-align: justify;
-    line-height: 20px;
   }
 }

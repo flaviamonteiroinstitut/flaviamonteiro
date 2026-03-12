@@ -1,22 +1,29 @@
+/* ===== FORMATION ===== */
 .formation-container {
   width: 90%;
+  max-width: 1100px;
   margin: 0 auto;
-  height: 600px; /* Set a fixed height or adjust as needed */
-  background-color: white;
-  margin-bottom: 45px;
-  font-family: Kanit, sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  text-align: center;
-  position: relative; /* Added for iframe positioning */
+  height: 600px;
+  background-color: var(--color-bg-alt);
+  margin-bottom: 50px;
+  margin-top: 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  position: relative;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .formation-container iframe {
   position: absolute;
-  margin-top: 30px;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: none; /* Ensure the border is removed */
+  border: none;
 }

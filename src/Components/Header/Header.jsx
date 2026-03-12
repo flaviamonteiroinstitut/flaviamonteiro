@@ -25,6 +25,13 @@ const Header = () => {
 
   return (
     <div className="header-container">
+      <img
+        className="header-logo"
+        src={logo}
+        alt="logo"
+        onClick={navigateToHome}
+      />
+
       <div
         className={`header-sandwich ${isMenuVisible ? "active" : ""}`}
         onClick={toggleMenu}
@@ -33,18 +40,12 @@ const Header = () => {
         <span></span>
         <span></span>
       </div>
-      <img
-        className="header-logo"
-        src={logo}
-        alt="logo"
-        onClick={navigateToHome}
-      />
 
       <nav className={`header-nav ${isMenuVisible ? "visible" : ""}`}>
         <ul className="header-menu">
-          <li onClick={() => handleItemClick("/apropos")}>À propos de moi</li>
-          <li onClick={() => handleItemClick("/monceau")}>*Monceau</li>
-          <li onClick={() => handleItemClick("/douai")}>*Douai</li>
+          <li onClick={() => handleItemClick("/apropos")}>À propos</li>
+          <li onClick={() => handleItemClick("/monceau")}>Monceau</li>
+          <li onClick={() => handleItemClick("/douai")}>Douai</li>
           <li onClick={() => handleItemClick("/photos")}>Galerie</li>
           <li onClick={() => handleItemClick("/prestations")}>Prestations</li>
           <li onClick={() => handleItemClick("/agenda")}>Cours</li>
