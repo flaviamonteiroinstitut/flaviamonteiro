@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import logo from "../../assets/img/logo1.png";
 import insta from "../../assets/img/instagram.png";
@@ -13,6 +13,11 @@ const Header = () => {
   };
 
   const [isMenuVisible, setMenuVisible] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuVisible ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [isMenuVisible]);
 
   const toggleMenu = () => {
     setMenuVisible(!isMenuVisible);
@@ -40,6 +45,10 @@ const Header = () => {
         <span></span>
         <span></span>
       </div>
+
+      {isMenuVisible && (
+        <div className="header-overlay" onClick={toggleMenu} />
+      )}
 
       <nav className={`header-nav ${isMenuVisible ? "visible" : ""}`}>
         <ul className="header-menu">
