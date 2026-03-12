@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./prestations.css";
 
 const ServiceModal = ({ service, onClose }) => {

@@ -1,4 +1,3 @@
-import ReactPlayer from "react-player";
 import "./lecabinet1.css";
 
 const LeCabinet1 = () => {
@@ -38,53 +37,43 @@ const LeCabinet1 = () => {
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/6.jpg"
             alt="cabinet"
           />
-              </div>
-              <div className="image-container">
-            <img
+        </div>
+        <div className="image-container">
+          <img
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/7.jpg"
             alt="cabinet"
           />
-            <img
+          <img
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/8.jpg"
             alt="cabinet"
           />
-          </div>
-            <div className="image-container">
-            <img
+        </div>
+        <div className="image-container">
+          <img
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/10.jpg"
             alt="cabinet"
           />
-             <img
+          <img
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/11.jpg"
             alt="cabinet"
           />
         </div>
         <div className="image-container">
-            <img
+          <img
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/6.jpg"
             alt="cabinet"
           />
-             <img
+          <img
             className="lecabinet-photo"
             src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/cabinet1/3.jpg"
             alt="cabinet"
           />
         </div>
-        {/* <div className="lecabinet-video">
-          <ReactPlayer
-            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/cabinet-video.mp4"
-            controls={true}
-            width="100%"
-            height="100%"
-            showStatus={false}
-            showThumbs={false}
-          />
-        </div> */}
       </div>
     </div>
   );
