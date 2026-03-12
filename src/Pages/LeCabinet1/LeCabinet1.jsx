@@ -5,7 +5,7 @@ const LeCabinet1 = () => {
     <div className="lecabinet-container">
       <div className="lecabinet-title">
         <h2>Cabinet Paris Douai</h2>
-        <a href="https://maps.app.goo.gl/qv8px8pFNHRPRz6Z8" target="_blank">
+        <a href="https://maps.app.goo.gl/qv8px8pFNHRPRz6Z8" target="_blank" rel="noreferrer">
           <h3>
             5 Rue de Douai <br />
             75009 Paris

@@ -6,7 +6,7 @@ const LeCabinet = () => {
     <div className="lecabinet-container">
       <div className="lecabinet-title">
         <h2>Cabinet Paris Monceau</h2>
-        <a href="https://maps.app.goo.gl/zG7tKkjWNvg8mWBN7" target="_blank">
+        <a href="https://maps.app.goo.gl/zG7tKkjWNvg8mWBN7" target="_blank" rel="noreferrer">
           <h3>
             12 Rue de Phalsbourg <br />
             75017 Paris

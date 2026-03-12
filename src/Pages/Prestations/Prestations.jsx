@@ -16,7 +16,6 @@ const ServiceModal = ({ service, onClose }) => {
 };
 
 const Prestations = () => {
-  const [expanded, setExpanded] = useState(false);
   const services = [
     {
       title: "Coaching privé",
