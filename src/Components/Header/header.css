@@ -157,26 +157,29 @@
   .header-sandwich {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
     position: absolute;
     right: 20px;
-    width: 34px;
-    height: 24px;
+    width: 38px;
+    height: 38px;
     cursor: pointer;
     z-index: 1100;
   }
 
   .header-sandwich span {
-    width: 100%;
+    display: block;
+    width: 30px;
     height: 2px;
     background-color: var(--color-text);
     border-radius: 2px;
     transition: all 0.35s ease;
-    transform-origin: center;
+    transform-origin: center center;
   }
 
   .header-sandwich.active span:first-child {
-    transform: rotate(45deg) translate(5px, 6px);
+    transform: translateY(9px) rotate(45deg);
   }
 
   .header-sandwich.active span:nth-child(2) {
@@ -185,7 +188,7 @@
   }
 
   .header-sandwich.active span:last-child {
-    transform: rotate(-45deg) translate(5px, -6px);
+    transform: translateY(-9px) rotate(-45deg);
   }
 
   /* Overlay */
