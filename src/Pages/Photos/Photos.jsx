@@ -84,7 +84,7 @@ const Photos = () => {
           </h3>
 
           <ReactPlayer
-            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4"
+            src="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4"
             controls={true}
             width="380px"
             height="auto"
@@ -107,7 +107,7 @@ const Photos = () => {
           </h3>
 
           <ReactPlayer
-            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/pilates/pilates.mp4"
+            src="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/pilates/pilates.mp4"
             controls={true}
             width="380px"
             height="auto"
@@ -129,7 +129,7 @@ const Photos = () => {
           </h3>
 
           <ReactPlayer
-            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4"
+            src="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4"
             controls={true}
             width="400px"
             height="auto"

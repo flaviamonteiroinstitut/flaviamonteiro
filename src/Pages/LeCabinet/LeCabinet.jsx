@@ -41,7 +41,7 @@ const LeCabinet = () => {
         </div>
         <div className="lecabinet-video">
           <ReactPlayer
-            url="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/cabinet-video.mp4"
+            src="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/cabinet-video.mp4"
             controls={true}
             width="100%"
             height="100%"
