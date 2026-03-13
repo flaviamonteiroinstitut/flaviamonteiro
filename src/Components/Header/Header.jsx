@@ -68,15 +68,6 @@ const Header = () => {
               <button className="header-button">Réserver Monceau</button>
             </a>
           </li>
-          <li>
-            <a
-              href="https://www.planity.com/studio-fla-75009-paris"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="header-button">Réserver Pigalle</button>
-            </a>
-          </li>
         </ul>
         <ul className="header-social">
           <li>
