@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import APropos from "./Pages/APropos/APropos";
 import Monceau from "./Pages/LeCabinet/LeCabinet";
-import Douai from "./Pages/LeCabinet1/LeCabinet1";
 import Photos from "./Pages/Photos/Photos";
 import Prestations from "./Pages/Prestations/Prestations";
 import Agenda from "./Pages/Evenements/Agenda";
@@ -23,7 +22,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/apropos" element={<APropos />} />
         <Route path="/monceau" element={<Monceau />} />
-        <Route path="/douai" element={<Douai />} />
         <Route path="/photos" element={<Photos />} />
         <Route path="/prestations" element={<Prestations />} />
         <Route path="/agenda" element={<Agenda />} />

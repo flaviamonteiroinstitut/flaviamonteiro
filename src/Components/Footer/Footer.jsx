@@ -30,19 +30,6 @@ const Footer = () => {
             </a>
           </span>
         </div>
-        <div className="footer-items">
-          <span className="footer-title">Cabinet Douai</span>
-          <span className="footer-text">
-            <a
-              href="https://maps.app.goo.gl/6nwRR1TevA7pr9L56"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              5 Rue de Douai <br />
-              75009 Paris
-            </a>
-          </span>
-        </div>
 
         <div className="footer-items">
           <span className="footer-title">Me Contacter</span>
