@@ -1,167 +1,147 @@
-// Import components
 import { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import "./apropos.css";
 
-// Modal component
-const Modal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+const PORTRAIT_IMAGES = [
+  "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo3.jpg",
+  "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo4.jpg",
+];
 
+const GALLERY_IMAGES = [
+  "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo1.jpg",
+  "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo6.jpg",
+  "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo2.jpg",
+  "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo7.jpg",
+  "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo5.jpg",
+];
+
+const HIGHLIGHTS = [
+  "Diplômes de professeur de sport et coach depuis 2014.",
+  "Formée et diplômée professeur de Pilates dans les écoles les plus renommées de Paris et du Brésil (Pilates classique et Néo Pilates).",
+  "Professeur diplômée de Yoga Vinyasa et formée au Jivamukti à New York City en 2019.",
+  "Diplômée (São Paulo, Brésil) en massage de drainage et remodelage Méthode Renata França.",
+  "Après 4 ans de pratique de la méthode Renata França, j'ai mis au point ma propre méthode — agissant sur les tissus adipeux et les zones de gonflements.",
+  "Coach de Yoga et Pilates des joueurs Paris Basket.",
+];
+
+const BioModal = ({ isOpen, onClose }) => {
+  if (!isOpen) return null;
   return (
-    <div className="apropos-modal-container">
-      <div className="apropos-modal-content">
-        <h2>Flavia Monteiro</h2>
+    <div className="bio-modal-overlay" onClick={onClose}>
+      <div className="bio-modal" onClick={(e) => e.stopPropagation()}>
+        <button className="bio-modal__close" onClick={onClose} aria-label="Fermer">
+          ×
+        </button>
+        <h2>
+          Flavia <em>Monteiro</em>
+        </h2>
         <p>
           Formée dans les écoles les plus renommées de Paris et du Brésil sur
-          des techniques classiques mais aussi des plus récentes tel que le Neo
-          Pilates. Elle a développé à son tour une méthode personnelle appelée
-          Suspension Pilates. Toujours à la recherche d’une autre voie, d’une
-          nouvelle manière d’aborder les choses, elle se perfectionne au
-          professorat de Yoga Vinyasa à Paris et de Jivamukti à New York City en
-          2019. Dernièrement, elle s’est tournée vers des soins complémentaires
-          à ses cours en suivant des formations de massages et de drainage au
-          Brésil selon la célèbre méthode Renata França. Le drainage lymphatique
-          se distingue par des résultats impressionnants et immédiats. Cette
-          technique réduit les œdèmes, active la circulation sanguine, développe
-          un réseau complexe de vaisseaux où circulent les fluides corporelles
-          combattant la cellulite. Résultats : un corps moins gonflé, un
-          métabolisme accéléré et une sensation de bien être. La méthode Renata
-          França est très efficace pour soulager et limiter les symptômes du
-          lipoedème, qui se caractérise par l'accumulation de tissu adipeux
-          (graisses) sous-cutané. En effet, même si c'est avant tout un désordre
-          des tissus adipeux, le lymphoedème est une conséquence secondaire du
-          lipoedème. Les témoignages sont unanimes quant à l'efficacité de cette
-          méthode. Une autre technique de la méthode Renata França est le
-          remodelage du corps, dont la principale caractéristique est
-          l'application de mouvements vigoureux et fermes sur tout le corps.
-          Conçu pour modeler les adipocytes, c'est à dire déplacer la graisse
-          vers d’autres endroits et par conséquent donner plus de contour au
-          corps. Après avoir travaillé au sein de clubs prestigieux de Paris
-          comme le groupe Ken Club et L'Usine, elle rejoint l’équipe des coachs
-          du Paris Basket pour donner des cours de yoga et de Pilates aux
-          joueurs professionnels du club. L'adaptation des cours pour les pros
-          est toujours un challenge.
+          des techniques classiques et récentes — tel le Neo Pilates —, elle a
+          développé à son tour une méthode personnelle appelée{" "}
+          <strong>Suspension Pilates</strong>.
         </p>
-        <button className="apropos-modal-button" onClick={onClose}>
-          Fermer
-        </button>
+        <p>
+          Toujours à la recherche d'une autre voie, elle se perfectionne au
+          professorat de Yoga Vinyasa à Paris et de Jivamukti à New York City en
+          2019. Elle s'est ensuite tournée vers des soins complémentaires avec
+          des formations de massages et de drainage au Brésil, selon la célèbre
+          méthode Renata França.
+        </p>
+        <p>
+          Le drainage lymphatique se distingue par des résultats impressionnants
+          et immédiats : il réduit les œdèmes, active la circulation sanguine et
+          combat la cellulite. Résultats : un corps moins gonflé, un métabolisme
+          accéléré et une vraie sensation de bien-être.
+        </p>
+        <p>
+          La méthode Renata França est également très efficace pour soulager les
+          symptômes du lipoedème. Une autre de ses techniques, le remodelage du
+          corps, applique des mouvements vigoureux et fermes pour modeler les
+          adipocytes et donner davantage de contour au corps.
+        </p>
+        <p>
+          Après avoir travaillé au sein de clubs prestigieux de Paris comme le
+          groupe Ken Club et L'Usine, Flavia rejoint l'équipe des coachs du
+          Paris Basket pour donner des cours de yoga et de Pilates aux joueurs
+          professionnels. L'adaptation des cours pour les pros reste toujours un
+          challenge stimulant.
+        </p>
       </div>
     </div>
   );
 };
 
 const APropos = () => {
-  // State to handle the modal visibility
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // Function to toggle the modal
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="apropos-container">
-      <div className="apropos-title">
-        <h3>
-          Coach sportive spécialisée en Pilates et Yoga <br /> depuis plus de 9
-          ans
-        </h3>
-      </div>
-      <div className="apropos-content">
-        <div className="apropos-carousel">
+    <div className="page apropos">
+      <section className="apropos__hero container">
+        <span className="eyebrow">À propos</span>
+        <h1 className="apropos__hero-title">
+          Coach sportive spécialisée en <em>Pilates</em> &amp; <em>Yoga</em>{" "}
+          depuis plus de 15 ans.
+        </h1>
+      </section>
+
+      <section className="apropos__intro container">
+        <div className="apropos__intro-media">
           <Carousel
-            autoPlay={true}
-            interval={3000}
-            infiniteLoop={true}
+            autoPlay
+            interval={4000}
+            infiniteLoop
             showThumbs={false}
-            swipeable={true}
             showStatus={false}
+            swipeable
+            showArrows={false}
           >
-            <div>
-              <img
-                src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo3.jpg"
-                alt="Photo 3"
-              />
-            </div>
-            <div>
-              <img
-                src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo4.jpg"
-                alt="Photo 4"
-              />
-            </div>
+            {PORTRAIT_IMAGES.map((src, i) => (
+              <div key={i} className="apropos__carousel-slide">
+                <img src={src} alt={`Flavia portrait ${i + 1}`} />
+              </div>
+            ))}
           </Carousel>
         </div>
-        <div className="apropos-text">
-          <p>
-            ▪️Diplômes de professeur de sport et coach depuis 2014.
-            <br />
-            ▪️Formée et diplômée professeur de Pilates dans les écoles les plus
-            renommées de Paris et du Brésil. Pilates classique et Néo Pilates.
-            <br />
-            ▪️Professeur diplômée de Yoga Vinyasa et formée au Jivamukti à New
-            York City en 2019. <br />
-            ▪️Formée et diplômée (São Paulo Brésil) au massage de drainage et
-            remodelage Méthode Renata França.
-            <br />
-            ▪️Après quatre ans de pratique de la méthode Renata França ainsi que
-            d'autres techniques, j'ai mis au point ma propre méthode qui agit
-            plus particulièrement sur les tissus adipeux et les zones de
-            gonflements
-            <br />
-            ▪️Coach de Yoga et Pilates des joueurs Paris Basket.
-          </p>
-          {/* PLUS button */}
-          <p className="apropos-button" onClick={toggleModal}>
-            PLUS
-          </p>
-          {/* Modal */}
-          <Modal isOpen={isModalOpen} onClose={toggleModal} />
+
+        <div className="apropos__intro-text">
+          <h2 className="apropos__intro-title">Mon parcours</h2>
+          <ul className="apropos__highlights">
+            {HIGHLIGHTS.map((h, i) => (
+              <li key={i}>
+                <span className="apropos__bullet" aria-hidden>•</span>
+                {h}
+              </li>
+            ))}
+          </ul>
+          <button
+            className="btn btn-outline apropos__more"
+            onClick={() => setModalOpen(true)}
+          >
+            Lire ma biographie complète
+          </button>
         </div>
-      </div>
-      <div className="apropos-carousel1">
-        <Carousel
-          autoPlay={true}
-          interval={3000}
-          infiniteLoop={true}
-          showThumbs={false}
-          swipeable={true}
-          showStatus={false}
-          dynamicHeight={true}
-        >
-          <div>
-            <img
-              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo1.jpg"
-              alt="Photo 1"
-            />
+      </section>
+
+      <section className="apropos__gallery">
+        <div className="container">
+          <span className="eyebrow">Studio</span>
+          <h2 className="section-title apropos__gallery-title">
+            Instantanés de <em>pratique</em>.
+          </h2>
+          <div className="apropos__gallery-mosaic">
+            {GALLERY_IMAGES.map((src, i) => (
+              <div key={i} className="apropos__gallery-item">
+                <img src={src} alt={`Gallery ${i + 1}`} loading="lazy" />
+              </div>
+            ))}
           </div>
-          <div>
-            <img
-              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo6.jpg"
-              alt="Photo 6"
-            />
-          </div>
-          <div>
-            <img
-              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo2.jpg"
-              alt="Photo 2"
-            />
-          </div>
-          <div>
-            <img
-              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo7.jpg"
-              alt="Photo 7"
-            />
-          </div>
-          <div>
-            <img
-              src="https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/phofil/photo5.jpg"
-              alt="Photo 5"
-            />
-          </div>
-        </Carousel>
-      </div>
+        </div>
+      </section>
+
+      <BioModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
   );
 };

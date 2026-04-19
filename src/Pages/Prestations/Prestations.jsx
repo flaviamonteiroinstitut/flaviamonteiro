@@ -1,214 +1,262 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./prestations.css";
 
+const SERVICES = [
+  {
+    title: "Coaching privé",
+    photo:
+      "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/coachingprive.jpg",
+    text: "Pilates, yoga ou renforcement musculaire — séance individuelle adaptée à votre niveau et vos objectifs.",
+    price: "80 €",
+    duration: "1 h",
+    tag: "Coaching",
+  },
+  {
+    title: "Coaching 2 personnes",
+    photo:
+      "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/coachinggroupe.jpg",
+    text: "Pilates, yoga ou renforcement musculaire en duo — la complicité d'une séance partagée.",
+    price: "90 €",
+    duration: "1 h",
+    tag: "Coaching",
+  },
+  {
+    title: "Drainage lymphatique ou remodelage",
+    photo:
+      "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/drainage/avantapres2-Grande.jpeg",
+    text: "Réduit les œdèmes, active la circulation, combat la cellulite. Le remodelage déplace la graisse pour redessiner les contours du corps.",
+    price: "120 €",
+    duration: "50 min",
+    tag: "Soin signature",
+  },
+  {
+    title: "Massage Drainage Plus",
+    photo:
+      "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres6-Grande.jpeg",
+    text: "Ma méthode personnelle, plus complète qu'un drainage classique : travail sur les tissus adipeux et le dégonflement du corps.",
+    price: "120 €",
+    duration: "1 h",
+    tag: "Signature",
+  },
+  {
+    title: "Massage thérapeutique relaxant",
+    photo:
+      "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/massage/massagerelaxante.jpg",
+    text: "Une parenthèse profonde de relâchement et de détente musculaire.",
+    price: "120 €",
+    duration: "1 h",
+    tag: "Massage",
+  },
+  {
+    title: "Drainage / remodelage à domicile",
+    photo:
+      "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres4-Grande.jpeg",
+    text: "Le confort de l'institut, chez vous — prestation à domicile dans Paris.",
+    price: "150 €",
+    duration: "1 h",
+    tag: "Home Care",
+  },
+  {
+    title: "Drain Face",
+    photo:
+      "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres4-Grande.jpeg",
+    text: "Massage et drainage lymphatique du visage. Détend les traits et apaise la peau.",
+    price: "70 €",
+    duration: "30 min",
+    tag: "Visage",
+  },
+  {
+    title: "Drainage lymphatique + EMSZERO",
+    photo:
+      "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/ems/emszero.jpg",
+    text: "L'association du drainage manuel et de la sculpture corporelle EMSZERO pour un effet renforcé.",
+    price: "180 €",
+    duration: "1 h 30",
+    tag: "Combo",
+  },
+  {
+    title: "EMSZERO",
+    photo:
+      "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/ems/emszero.jpg",
+    text: "L'appareil de sculpture corporelle qui tonifie et redessine en seulement 30 min.",
+    price: "80 €",
+    duration: "30 min",
+    tag: "Technologie",
+  },
+];
+
+const FORFAITS = [
+  {
+    title: "Coaching + Massage",
+    text: "Pilates, yoga ou renforcement musculaire suivi d'un massage.",
+    price: "190 €",
+    duration: "2 h",
+  },
+  {
+    title: "4 sessions de massage RF",
+    text: "Méthode Renata França — 4 séances pour des résultats visibles.",
+    price: "440 €",
+    duration: "50 min / séance",
+  },
+  {
+    title: "8 sessions de massage RF",
+    text: "Méthode Renata França — protocole intensif sur 8 séances.",
+    price: "840 €",
+    duration: "50 min / séance",
+  },
+  {
+    title: "10 sessions de massage RF",
+    text: "Méthode Renata França — l'engagement long pour une vraie transformation.",
+    price: "1 000 €",
+    duration: "50 min / séance",
+  },
+  {
+    title: "Forfait femme enceinte",
+    text: "Protocole adapté à chaque trimestre, en douceur.",
+    price: "Sur devis",
+    duration: "—",
+  },
+  {
+    title: "Forfait post-opératoire",
+    text: "Drainages post-opératoires recommandés (liposuccion, abdominoplastie, implants…). 2 séances/semaine, minimum 5 semaines.",
+    price: "Sur devis",
+    duration: "1 h / séance",
+  },
+  {
+    title: "4 séances EMSZERO",
+    text: "Sculpture corporelle, protocole de 4 séances.",
+    price: "280 €",
+    duration: "30 min / séance",
+  },
+];
+
 const ServiceModal = ({ service, onClose }) => {
+  useEffect(() => {
+    const onKey = (e) => e.key === "Escape" && onClose();
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
   return (
-    <div className="prestations-modal-overlay">
-      <div className="prestations-modal">
-        <h2>{service.title}</h2>
-        <p>{service.text}</p>
-        <img src={service.photo} alt="" />
-        <p>Prix : {service.price}</p>
-        <button onClick={onClose}>Fermer</button>
+    <div className="prestation-modal-overlay" onClick={onClose}>
+      <div className="prestation-modal" onClick={(e) => e.stopPropagation()}>
+        <button
+          className="prestation-modal__close"
+          onClick={onClose}
+          aria-label="Fermer"
+        >
+          ×
+        </button>
+        <div className="prestation-modal__media">
+          <img src={service.photo} alt={service.title} />
+        </div>
+        <div className="prestation-modal__body">
+          <span className="prestation-modal__tag">{service.tag}</span>
+          <h2>{service.title}</h2>
+          <p>{service.text}</p>
+          <div className="prestation-modal__meta">
+            <div>
+              <span>Prix</span>
+              <strong>{service.price}</strong>
+            </div>
+            <div>
+              <span>Durée</span>
+              <strong>{service.duration}</strong>
+            </div>
+          </div>
+          <a
+            href="https://www.planity.com/flavia-monteiro-institut-de-massage-75017-paris"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
+            Réserver cette prestation
+          </a>
+        </div>
       </div>
     </div>
   );
 };
 
 const Prestations = () => {
-  const services = [
-    {
-      title: "Coaching privé",
-      photo:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/coachingprive.jpg",
-      text: "Pilates, yoga ou renforcement musculaire - 80 € - 1 h",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "80 € - 1 h",
-    },
-    {
-      title: "Coaching 2 personnes",
-      photo:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/coachinggroupe.jpg",
-      text: "Pilates, yoga ou renforcement musculaire - 90 € - 1 h",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
-      price: "90 € - 1 h",
-    },
-    {
-      title: "Drainage lympathique ou remodelage du corps",
-      photo:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/drainage/avantapres2-Grande.jpeg",
-      text: "Drainage lymphatique: Réduit les cedèmes, active la circulation sanguine, développe un réseau complexe de vaisseaux où circulent les fluides corporelles, combattant la cellulite. Remodelage du corps: Conçu pour modeler les adipocytes, c'est-à-dire déplacer la graisse aux bons endroits, par conséquent, donner plus de contour au corps. 120 € - 50 min",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "120 € - 50 min",
-    },
-    {
-      title: "Massage Drainage Plus",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres6-Grande.jpeg",
-      text: "Après avoir suivi plusieurs formations et appris diverses techniques, j'ai développé le Drainege Plus, c'est un peu plus qu'un drainage classique, travaillant également les tissus adipeux et le dégonflement du corps. 120 € - 1 h",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "120 € - 1 h",
-    },
-    {
-      title: "Massage thérapeutique relaxant",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/refs/heads/main/src/assets/img/massage/massagerelaxante.jpg",
-      text: "120 € - 1 h",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
-      price: "120 € - 1 h",
-    },
-    {
-      title: "Drainage lymphatique ou remodelage du corps home care ",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres4-Grande.jpeg",
-      text: "Prestation à domicile - 150 € - 1 h",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
-      price: "150 €",
-    },
-    {
-      title: "Drain Face",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres4-Grande.jpeg",
-      text: "Massage et drainage lymphatique du visage. Un vrai bonheur pour détendre le visage et apaiser les traits - 70 € - 30 min",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
-      price: "70 €",
-    },
-    {
-      title: "Drainage lymphatique et EMSZERO",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/ems/emszero.jpg",
-      text: "L'appareil de sculpture...... - 180 € - 1h30 min",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
-      price: "180 €",
-    },
-    {
-      title: "EMSZERO",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/ems/emszero.jpg",
-      text: "L'appareil de sculpture corporel..... - 80 € - 30 min",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
-      price: "80 €",
-    },
-  ];
-  const forfaits = [
-    {
-      title: "Coaching + Massage",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/drainage/avantapres7-Grande.jpeg",
-      text: "Pilates, yoga ou renforcement musculaire + massage - 190 € - 2 h",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "190 € - 2 h",
-    },
-    {
-      title: "Forfait 4 sessions de massage RF",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
-      text: "Méthode Renata França - 440 € - 50 min",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "440 € - 50 min",
-    },
-    {
-      title: "Forfait 8 sessions de massage RF",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
-      text: "Méthode Renata França - 840 € - 50 min",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "840 € - 50 min",
-    },
-    {
-      title: "Forfait 10 sessions de massage RF",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
-      text: "Méthode Renata França - 1000 € - 50 min",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "1000 € - 50 min",
-    },
-    {
-      title: "Forfait femme enceinte",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
-      text: "Sur devis",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "Sur devis - 50 min",
-    },
-    {
-      title: "Forfait post-operatoire",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
-      text: "Les drainages port-opératoire sont fortement conseillées, 7 à 10 jours après l'opération et d'activer l'élimination de l'oedème. Il est préconisée de faire deux séances de drainage par semaine, pendant une durée minimale de 5 semaines. Liposuccion, abdominoplastie, implants, entre autres. Sur devis - 1 h",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "Sur devis - 1 h",
-    },
-    {
-      title: "Forfait 4 séances EMSZERO",
-      photo:
-        "https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/remodelage/IMG_3602%20-%20Grande.jpeg",
-      text: "280 € - 30 min",
-      video:
-        "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
-      price: "280 € - 30 min",
-    },
-  ];
-
-  const [selectedService, setSelectedService] = useState(null);
-
-  const openModal = (service) => {
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {
-    setSelectedService(null);
-  };
+  const [selected, setSelected] = useState(null);
 
   return (
-    <div className="prestations-container">
-      <h2 className="prestations-title">Prestations</h2>
-      <h5 className="prestations-title1">
-        cliquer/toucher pour plus d'informations
-      </h5>
-      {services.map((service, index) => (
-        <div
-          key={index}
-          className={`prestations-service-item${
-            index === services.length - 1 ? " prestations-last-item" : ""
-          }`}
-          onClick={() => openModal(service)}
-        >
-          <div className="prestations-service-info">
-            <h3>{service.title}</h3>
-            <p>{service.text}</p>
-          </div>
-          <img src={service.photo} alt={service.title} />
-        </div>
-      ))}
-      {selectedService && (
-        <ServiceModal service={selectedService} onClose={closeModal} />
-      )}
-      <h2 className="prestations-title3">Forfaits</h2>
+    <div className="page prestations">
+      <section className="prestations__hero container">
+        <span className="eyebrow">Prestations</span>
+        <h1 className="prestations__hero-title">
+          Coaching, soins &amp; <em>signature</em>.
+        </h1>
+        <p className="prestations__hero-lead">
+          Une carte pensée pour s'adapter à vous — du cours individuel aux
+          protocoles complets de drainage et remodelage.
+        </p>
+      </section>
 
-      {forfaits.map((forfait, index) => (
-        <div key={index} className="prestations-service-item1">
-          <div className="prestations-service-info1">
-            <h3>{forfait.title}</h3>
-            <p>{forfait.text}</p>
+      <section className="prestations__list container">
+        <div className="prestations__grid">
+          {SERVICES.map((service) => (
+            <button
+              key={service.title}
+              className="prestation-card"
+              onClick={() => setSelected(service)}
+            >
+              <div className="prestation-card__media">
+                <img src={service.photo} alt={service.title} loading="lazy" />
+                <span className="prestation-card__tag">{service.tag}</span>
+              </div>
+              <div className="prestation-card__body">
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+                <div className="prestation-card__footer">
+                  <span className="prestation-card__price">
+                    {service.price}
+                  </span>
+                  <span className="prestation-card__duration">
+                    {service.duration}
+                  </span>
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="prestations__forfaits">
+        <div className="container">
+          <span className="eyebrow">Forfaits</span>
+          <h2 className="section-title prestations__forfaits-title">
+            Programmes &amp; <em>cures</em>.
+          </h2>
+          <p className="section-lead prestations__forfaits-lead">
+            Pour s'engager dans un travail de fond, j'ai construit des
+            programmes complets.
+          </p>
+
+          <div className="forfait-grid">
+            {FORFAITS.map((f) => (
+              <article key={f.title} className="forfait-card">
+                <h3>{f.title}</h3>
+                <p>{f.text}</p>
+                <div className="forfait-card__meta">
+                  <span>{f.price}</span>
+                  <span>·</span>
+                  <span>{f.duration}</span>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
-      ))}
+      </section>
+
+      {selected && (
+        <ServiceModal service={selected} onClose={() => setSelected(null)} />
+      )}
     </div>
   );
 };

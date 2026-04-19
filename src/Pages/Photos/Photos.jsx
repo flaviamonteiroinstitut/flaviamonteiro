@@ -1,4 +1,4 @@
-// Import packages
+import { useMemo } from "react";
 import ReactPlayer from "react-player";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -8,144 +8,111 @@ import drainage from "./drainage.json";
 import pilates from "./pilates.json";
 
 const shuffleArray = (array) => {
-  let shuffledArray = [...array];
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
+  const out = [...array];
+  for (let i = out.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    [out[i], out[j]] = [out[j], out[i]];
   }
-  return shuffledArray;
+  return out;
 };
 
+const VIDEOS = [
+  {
+    title: "Drainage Renata França",
+    subtitle: "Femme enceinte",
+    src: "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4",
+  },
+  {
+    title: "Pilates",
+    subtitle: "Suspension & sol",
+    src: "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/pilates/pilates.mp4",
+  },
+  {
+    title: "Yoga",
+    subtitle: "Vinyasa flow",
+    src: "https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4",
+  },
+];
+
 const Photos = () => {
-  const shuffledDrainageList = shuffleArray(drainage.photos);
-  const shuffledPilatesList = shuffleArray(pilates.photos);
+  const drainageList = useMemo(() => shuffleArray(drainage.photos), []);
+  const pilatesList = useMemo(() => shuffleArray(pilates.photos), []);
+
+  const renderCarousel = (list, keyPrefix) => (
+    <Carousel
+      autoPlay
+      interval={3000}
+      infiniteLoop
+      showThumbs={false}
+      showStatus={false}
+      showIndicators={false}
+      useKeyboardArrows
+      swipeable
+      dynamicHeight
+    >
+      {list.map((photoPath, i) => (
+        <div key={`${keyPrefix}-${i}`}>
+          <img src={photoPath} alt={`${keyPrefix} ${i + 1}`} />
+        </div>
+      ))}
+    </Carousel>
+  );
 
   return (
-    <div className="photos-container">
-      <div className="photos-title">
-        <h2>Galerie de photos</h2>
-      </div>
-      <div className="photos-carousels">
-        <div>
-          <h3>
-            REMODELAGE DU CORPS <br /> DRAINAGE LYMPATHIQUE
-          </h3>
-          <Carousel
-            className="photos-carousel-options"
-            autoPlay={true}
-            interval={3000}
-            infiniteLoop={true}
-            showThumbs={false}
-            thumbWidth={70}
-            swipeable={true}
-            showStatus={false}
-            showIndicators={false}
-            useKeyboardArrows={true}
-            dynamicHeight={true}
-          >
-            {shuffledDrainageList.map((photoPath, index) => (
-              <div key={index}>
-                <img src={photoPath} alt={`Photo ${index}`} />
-              </div>
-            ))}
-          </Carousel>
+    <div className="page galerie">
+      <section className="galerie__hero container">
+        <span className="eyebrow">Galerie</span>
+        <h1 className="galerie__title">
+          Photos &amp; <em>vidéos</em>.
+        </h1>
+        <p className="galerie__lead">
+          Quelques instantanés des cours, des séances de drainage et des
+          résultats avant/après.
+        </p>
+      </section>
+
+      <section className="galerie__dual container">
+        <div className="galerie__dual-item">
+          <h2 className="galerie__dual-title">Drainage &amp; Remodelage</h2>
+          <div className="galerie__carousel">
+            {renderCarousel(drainageList, "drainage")}
+          </div>
         </div>
-        <div>
-          <h3>
-            COACHING <br /> PILATES - YOGA
-          </h3>
-          <Carousel
-            className="photos-carousel-options"
-            autoPlay={true}
-            interval={3000}
-            infiniteLoop={true}
-            showThumbs={false}
-            thumbWidth={70}
-            swipeable={true}
-            showStatus={false}
-            showIndicators={false}
-            useKeyboardArrows={true}
-            dynamicHeight={true}
-          >
-            {shuffledPilatesList.map((photoPath, index) => (
-              <div key={index}>
-                <img src={photoPath} alt={`Photo ${index}`} />
-              </div>
-            ))}
-          </Carousel>
+        <div className="galerie__dual-item">
+          <h2 className="galerie__dual-title">Coaching Pilates &amp; Yoga</h2>
+          <div className="galerie__carousel">
+            {renderCarousel(pilatesList, "pilates")}
+          </div>
         </div>
-      </div>
-      <h2 className="photos-video-area">Galerie de Videos</h2>
-      <ul className="photos-videos">
-        <li>
-          <h3>
-            Drainage lymphatique pour femme enceinte
-            <br /> Méthode Renata França
-          </h3>
+      </section>
 
-          <ReactPlayer
-            src="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/remodelage/remodelage-renata.MP4"
-            controls={true}
-            width="380px"
-            height="auto"
-            style={{
-              borderRadius: "7px",
-              borderBottomLeftRadius: "17px",
-              borderBottomRightRadius: "17px",
-              border: "1px solid white",
-              margin: "0",
-              overflow: "hidden",
-            }} // Add this line
-            showStatus={false}
-            showThumbs={false}
-          />
-        </li>
-        <li>
-          <h3>
-            Pilates <br />
-            <br />
-          </h3>
+      <section className="galerie__videos">
+        <div className="container">
+          <span className="eyebrow">Vidéos</span>
+          <h2 className="section-title galerie__videos-title">
+            En <em>mouvement</em>.
+          </h2>
 
-          <ReactPlayer
-            src="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/pilates/pilates.mp4"
-            controls={true}
-            width="380px"
-            height="auto"
-            style={{
-              borderRadius: "7px",
-              borderBottomLeftRadius: "17px",
-              borderBottomRightRadius: "17px",
-              border: "1px solid white",
-              margin: "0",
-              overflow: "hidden",
-            }} // Add this line
-            showStatus={false}
-            showThumbs={false}
-          />
-        </li>
-        <li>
-          <h3>
-            Yoga <br />
-          </h3>
-
-          <ReactPlayer
-            src="https://github.com/flaviamonteiroinstitut/flaviamonteiro/raw/main/src/assets/img/yoga/yoga.mp4"
-            controls={true}
-            width="400px"
-            height="auto"
-            style={{
-              borderRadius: "7px",
-              borderBottomLeftRadius: "17px",
-              borderBottomRightRadius: "17px",
-              border: "1px solid white",
-              // margin: "0 auto",
-              overflow: "hidden",
-            }} // Add this line
-            showStatus={false}
-            showThumbs={false}
-          />
-        </li>
-      </ul>
+          <div className="galerie__videos-grid">
+            {VIDEOS.map((v) => (
+              <article key={v.title} className="galerie__video-card">
+                <div className="galerie__video-player">
+                  <ReactPlayer
+                    src={v.src}
+                    controls
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <h3>
+                  {v.title}
+                  <span>{v.subtitle}</span>
+                </h3>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

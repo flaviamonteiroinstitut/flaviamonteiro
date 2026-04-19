@@ -1,76 +1,248 @@
-/* ===== HOME HERO ===== */
-.home-background {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+.home {
+  animation: fadeIn 0.6s ease-out;
 }
 
-.home-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
   width: 100%;
-  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
   background-image: url("https://raw.githubusercontent.com/flaviamonteiroinstitut/flaviamonteiro/main/src/assets/img/new-backgroung.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 60px;
-  gap: 14px;
+  color: #fff;
+  padding-top: var(--header-height);
 }
 
-.home-overlay::before {
-  content: "";
+.hero__overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent);
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    rgba(15, 12, 9, 0.55) 0%,
+    rgba(15, 12, 9, 0.25) 50%,
+    rgba(15, 12, 9, 0.6) 100%
+  );
   pointer-events: none;
 }
 
-.home-button {
+.hero__content {
   position: relative;
-  z-index: 1;
-  width: 200px;
-  padding: 14px 0;
-  background-color: var(--color-accent);
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: 16px;
-  color: white;
+  z-index: 2;
+  max-width: 780px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeInUp 1s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.hero__eyebrow {
+  display: inline-block;
   font-family: var(--font-heading);
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 8px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-full);
+  margin-bottom: 28px;
+  backdrop-filter: blur(6px);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(52px, 9vw, 120px);
   font-weight: 300;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all var(--transition);
-  box-shadow: 0 4px 15px rgba(196, 149, 106, 0.4);
+  line-height: 0.95;
+  color: #fff;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
 }
 
-.home-button:hover {
-  background-color: var(--color-accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(196, 149, 106, 0.5);
+.hero__title em {
+  font-style: italic;
+  color: var(--color-accent-light);
+  font-weight: 300;
 }
 
-.home-button:active {
-  transform: translateY(0);
+.hero__lead {
+  font-size: clamp(16px, 1.6vw, 19px);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 560px;
+  margin-bottom: 40px;
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 520px) {
-  .home-overlay {
-    padding-bottom: 40px;
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.hero__scroll span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  animation: heroScroll 2.4s infinite cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes heroScroll {
+  0% { transform: translateY(-100%); }
+  60%, 100% { transform: translateY(100%); }
+}
+
+/* ===== HIGHLIGHTS ===== */
+.home__intro {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.home__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 40px 32px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: transform var(--transition), border-color var(--transition),
+    box-shadow var(--transition);
+  overflow: hidden;
+}
+
+.home__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-soft) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+
+.home__card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-accent-light);
+  box-shadow: var(--shadow-md);
+}
+
+.home__card:hover::before {
+  opacity: 1;
+}
+
+.home__card-kicker {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  position: relative;
+}
+
+.home__card-title {
+  font-size: 26px;
+  font-weight: 400;
+  position: relative;
+}
+
+.home__card-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  position: relative;
+}
+
+.home__card-arrow {
+  margin-top: 8px;
+  font-size: 22px;
+  color: var(--color-accent);
+  transition: transform var(--transition);
+  position: relative;
+}
+
+.home__card:hover .home__card-arrow {
+  transform: translateX(6px);
+}
+
+/* ===== QUOTE ===== */
+.home__quote {
+  padding: 100px 0;
+  background: var(--color-bg-sand);
+  text-align: center;
+}
+
+.home__quote p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(24px, 3.5vw, 36px);
+  line-height: 1.4;
+  color: var(--color-text);
+  max-width: 760px;
+  margin: 0 auto 20px;
+  font-weight: 300;
+}
+
+.home__quote span {
+  font-family: var(--font-heading);
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .home__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
+  .home__card {
+    padding: 32px 28px;
+  }
+}
 
-  .home-button {
-    width: 180px;
-    padding: 12px 0;
-    font-size: 15px;
+@media (max-width: 520px) {
+  .hero__content {
+    padding-bottom: 80px;
+  }
+  .hero__cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__cta .btn {
+    width: 100%;
+    max-width: 320px;
+  }
+  .home__quote {
+    padding: 72px 0;
   }
 }
