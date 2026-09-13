@@ -1,5 +1,5 @@
 import { NavLink, useNavigate, useLocation } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import logo from "../../assets/img/logo-fla.png";
 import "./header.css";
@@ -34,11 +34,12 @@ const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const previousPath = useRef(location.pathname);
+  const [prevPath, setPrevPath] = useState(location.pathname);
 
-  if (previousPath.current !== location.pathname) {
-    previousPath.current = location.pathname;
-    if (isMenuOpen) setMenuOpen(false);
+  // Ferme le menu mobile au changement de route (pattern "adjust state on prop change")
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
+    setMenuOpen(false);
   }
 
   useEffect(() => {
