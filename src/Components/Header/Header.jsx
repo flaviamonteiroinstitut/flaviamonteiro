@@ -27,7 +27,6 @@ const NAV_ITEMS = [
   { path: "/monceau", label: "Monceau" },
   { path: "/photos", label: "Galerie" },
   { path: "/prestations", label: "Prestations" },
-  { path: "/agenda", label: "Cours" },
 ];
 
 const Header = () => {
